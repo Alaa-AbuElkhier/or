@@ -34,6 +34,7 @@ function HomeSlider() {
             {' '}
             <div className='header-shape'>
               <Row
+                align={'middle'}
                 style={{
                   background: 'black',
                   paddingTop: '150px',
@@ -60,16 +61,17 @@ function HomeSlider() {
                   </Paragraph>
                   <Space size={'middle'}>
                     <Button
+                      size='large'
                       style={{
                         backgroundColor: 'transparent',
                         color: 'white',
                       }}>
                       LERN MORE ABOUT ORDERITTO
                     </Button>
-                    <Button>START NOW</Button>
+                    <Button size='large'>START NOW</Button>
                   </Space>
                 </Col>
-                <Col span={12}>
+                <Col xs={24} sm={24} md={24} lg={12} xl={12} align='middle'>
                   <img src={home1} alt='home1' />
                 </Col>
               </Row>

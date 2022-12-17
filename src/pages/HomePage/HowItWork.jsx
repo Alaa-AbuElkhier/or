@@ -1,26 +1,10 @@
 import React from 'react';
-import {
-  Layout,
-  Menu,
-  theme,
-  Row,
-  Col,
-  Button,
-  Switch,
-  Typography,
-  Space,
-} from 'antd';
-import ServicesweProvide from './ServicesweProvide';
-import logo from '../../assets/logo.png';
-import servicebg from '../../assets/home1.png';
+import { Layout, Row, Col, Button, Typography } from 'antd';
+
 import home2 from '../../assets/home2.png';
 import home3 from '../../assets/home3.png';
-import FeaturesYouWillGet from './FeaturesYouWillGet';
-import LifetimeUpdates from './LifetimeUpdates';
-import OurPricingPlans from './OurPricingPlans';
-import GetYourBusinessApp from './GetYourBusinessApp';
-const { Header, Content, Footer } = Layout;
-const { Paragraph, Text } = Typography;
+
+const { Paragraph } = Typography;
 
 function HowItWork() {
   return (

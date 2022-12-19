@@ -125,7 +125,7 @@ code {
    left: 0;
    top: 0;
    z-index: 999;
-   background-color: transparent;
+   background-color: black;
    border: 0;
    -webkit-transition: all .5s ease;
    transition: all .5s ease;
@@ -136,4 +136,8 @@ code {
 }
 .curve-slider{
   border-bottom-left-radius: 40%;
+}
+.section{
+  margin-top: 50px;
+
 }

@@ -54,7 +54,7 @@ function FeaturesYouWillGet() {
   return (
     <div
       style={{
-        background: 'white',
+        background: 'transparent',
         backgroundImage: `url(${featuresBg})`,
       }}>
       <Row
@@ -119,7 +119,7 @@ function FeaturesYouWillGet() {
             </>
           ))}
         </Row>
-        <Row justify={'center'}>
+        <Row justify={'center'} style={{ marginBottom: '50px' }}>
           <Button type='primary' size='large'>
             VIEW ALL FEATURES
           </Button>

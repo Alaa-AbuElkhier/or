@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col, Button, Typography } from 'antd';
+import { Row, Col, Button, Typography } from 'antd';
 
 import home2 from '../../assets/home2.png';
 import home3 from '../../assets/home3.png';

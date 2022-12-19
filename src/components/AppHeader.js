@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Layout,
   Menu,
@@ -25,15 +25,23 @@ import home3 from '../assets/home3.png';
 const { Header, Content, Footer } = Layout;
 const { Paragraph, Text } = Typography;
 
-function AppHeader() {
+function AppHeader({ switchTheme, isDarkMode }) {
   const items = [
     {
-      label: 'About Us',
-      key: 'mail',
+      label: (
+        <a href='/about-us' rel='noopener noreferrer'>
+          About Us
+        </a>
+      ),
+      key: 'about-us',
     },
     {
-      label: 'Services',
-      key: 'app',
+      label: (
+        <a href='/about-us' rel='noopener noreferrer'>
+          Services
+        </a>
+      ),
+      key: 'contact-us',
       children: [
         {
           type: 'group',
@@ -66,20 +74,32 @@ function AppHeader() {
       ],
     },
     {
-      label: 'Pricing',
-      key: 'SubMenu',
-    },
-    {
-      label: 'FAQ',
-      key: 'SubMenu',
-    },
-    {
-      label: 'Contact Us',
-      key: 'SubMenu',
+      label: (
+        <a href='/about-us' rel='noopener noreferrer'>
+          Pricing
+        </a>
+      ),
+      key: 'pricing',
     },
     {
       label: (
-        <a href='https://ant.design' target='_blank' rel='noopener noreferrer'>
+        <a href='/about-us' rel='noopener noreferrer'>
+          FAQ
+        </a>
+      ),
+      key: 'FAQ',
+    },
+    {
+      label: (
+        <a href='/contact-us' rel='noopener noreferrer'>
+          Contact Us
+        </a>
+      ),
+      key: 'contact-us',
+    },
+    {
+      label: (
+        <a href='https://ant.design' rel='noopener noreferrer'>
           Flag
         </a>
       ),
@@ -107,7 +127,12 @@ function AppHeader() {
             </div>
           </Col>{' '}
           <Col xs={0} sm={0} md={0} lg={2} xl={3}>
-            <Switch checkedChildren='Dark' unCheckedChildren='Light' />
+            <Switch
+              checkedChildren='Dark'
+              unCheckedChildren='Light'
+              // checked={isDarkMode}
+              // onChange={switchTheme}
+            />
           </Col>
           <Col xs={0} sm={0} md={0} lg={2} xl={3}>
             <div className='nav-buttons'>

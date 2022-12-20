@@ -1,0 +1,16 @@
+<Row
+        style={{
+          paddingTop: '100px',
+        }}
+        justify={'center'}>
+        <Col span={12} push={2}>
+          <img src={home7} alt='home7' />
+        </Col>
+        <Col span={12}>
+          {' '}
+        
+         
+        
+        
+        </Col>
+      </Row>

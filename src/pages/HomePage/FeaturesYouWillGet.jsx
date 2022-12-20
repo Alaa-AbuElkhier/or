@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Typography, Card } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import featuresBg from '../../assets/featuresBg.png';
 import icon1 from '../../assets/icon1.png';
@@ -8,11 +9,13 @@ import icon3 from '../../assets/icon3.png';
 import icon4 from '../../assets/icon4.png';
 import icon5 from '../../assets/icon5.png';
 import icon6 from '../../assets/icon6.png';
+import featuresBgRes from '../../assets/featuresBgRes.png';
 import logo from '../../assets/logo.png';
 const { Meta } = Card;
 const { Paragraph, Text } = Typography;
 
 function FeaturesYouWillGet() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const items = [
     {
       icon: icon1,
@@ -52,80 +55,159 @@ function FeaturesYouWillGet() {
     },
   ];
   return (
-    <div
-      style={{
-        background: 'transparent',
-        backgroundImage: `url(${featuresBg})`,
-      }}>
-      <Row
-        style={{
-          paddingBottom: '50px',
-        }}
-        justify={'center'}>
-        <Typography.Title
-          level={1}
+    <>
+      {isTabletOrMobile ? (
+        <div
           style={{
-            color: 'black',
+            background: 'transparent',
+            backgroundImage: `url(${featuresBgRes})`,
           }}>
-          Features You Will Get
-        </Typography.Title>
-      </Row>
-      <div className='container'>
-        <Row
-          justify={'center'}
-          gutter={[16, 16]}
-          style={{
-            paddingBottom: '50px',
-          }}>
-          {items.map((item) => (
-            <>
-              {' '}
-              <Col span={7}>
-                <div className='site-card-border-less-wrapper'>
-                  <Card
-                    bordered={false}
-                    style={{
-                      width: 350,
-                      background: '#E3E3E3',
-                      color: 'black',
-                    }}>
-                    <Row align={'middle'}>
-                      <Col span={6}>
-                        <img src={item.icon} alt='icon1' />
-                      </Col>
+          <Row
+            style={{
+              paddingBottom: '50px',
+            }}
+            justify={'center'}>
+            <Typography.Title
+              level={2}
+              style={{
+                color: 'black',
+              }}>
+              Features You Will Get
+            </Typography.Title>
+          </Row>
+          <div className='container'>
+            {items.map((item) => (
+              <>
+                {' '}
+                <Row
+                  justify={'center'}
+                  style={{
+                    paddingBottom: '20px',
+                  }}>
+                  <div className='site-card-border-less-wrapper'>
+                    <Card
+                      bordered={false}
+                      style={{
+                        width: 350,
+                        background: '#E3E3E3',
+                        color: 'black',
+                        borderRadius: '20px',
+                      }}>
+                      <Row align={'middle'}>
+                        <Col span={6}>
+                          <img src={item.icon} alt='icon1' />
+                        </Col>
 
-                      <Col>
-                        {' '}
-                        <Text style={{ color: 'black', fontWeight: 'bold' }}>
-                          {item.title}
-                        </Text>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <p>{item.content}</p>
-                    </Row>
-                    <Row>
-                      <Button
+                        <Col>
+                          {' '}
+                          <Text style={{ color: 'black', fontWeight: 'bold' }}>
+                            {item.title}
+                          </Text>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <p>{item.content}</p>
+                      </Row>
+                      <Row>
+                        <Button
+                          style={{
+                            backgroundColor: 'transparent',
+                            borderColor: 'black',
+                          }}>
+                          READ MORE
+                        </Button>
+                      </Row>
+                    </Card>
+                  </div>
+                </Row>
+              </>
+            ))}
+
+            <Row justify={'center'} style={{ marginBottom: '50px' }}>
+              <Button type='primary' size='large'>
+                VIEW ALL FEATURES
+              </Button>
+            </Row>
+          </div>
+        </div>
+      ) : (
+        <div
+          style={{
+            background: 'transparent',
+            backgroundImage: `url(${featuresBg})`,
+          }}>
+          <Row
+            style={{
+              paddingBottom: '50px',
+            }}
+            justify={'center'}>
+            <Typography.Title
+              level={1}
+              style={{
+                color: 'black',
+              }}>
+              Features You Will Get
+            </Typography.Title>
+          </Row>
+          <div className='container'>
+            <Row
+              justify={'center'}
+              gutter={[16, 16]}
+              style={{
+                paddingBottom: '50px',
+              }}>
+              {items.map((item) => (
+                <>
+                  {' '}
+                  <Col span={7}>
+                    <div className='site-card-border-less-wrapper'>
+                      <Card
+                        bordered={false}
                         style={{
-                          backgroundColor: 'transparent',
-                          borderColor: 'black',
+                          width: 350,
+                          background: '#E3E3E3',
+                          color: 'black',
                         }}>
-                        READ MORE
-                      </Button>
-                    </Row>
-                  </Card>
-                </div>
-              </Col>
-            </>
-          ))}
-        </Row>
-        <Row justify={'center'} style={{ marginBottom: '50px' }}>
-          <Button type='primary' size='large'>
-            VIEW ALL FEATURES
-          </Button>
-        </Row>
-      </div>
-    </div>
+                        <Row align={'middle'}>
+                          <Col span={6}>
+                            <img src={item.icon} alt='icon1' />
+                          </Col>
+
+                          <Col>
+                            {' '}
+                            <Text
+                              style={{ color: 'black', fontWeight: 'bold' }}>
+                              {item.title}
+                            </Text>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <p>{item.content}</p>
+                        </Row>
+                        <Row>
+                          <Button
+                            style={{
+                              backgroundColor: 'transparent',
+                              borderColor: 'black',
+                            }}>
+                            READ MORE
+                          </Button>
+                        </Row>
+                      </Card>
+                    </div>
+                  </Col>
+                </>
+              ))}
+            </Row>
+            <Row justify={'center'} style={{ marginBottom: '50px' }}>
+              <Button type='primary' size='large'>
+                VIEW ALL FEATURES
+              </Button>
+            </Row>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

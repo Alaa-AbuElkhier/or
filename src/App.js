@@ -14,79 +14,38 @@ import ContactUs from './pages/ContactUsPage/ContactUs';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
-  const [isDark, setisDark] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const switchTheme = (isDarkMode) => {
-    setIsDarkMode((prev) => !prev);
-    console.log(isDarkMode);
-  };
-
   return (
     <div className='App'>
-      {isDarkMode ? (
-        <ConfigProvider
-          theme={{
-            algorithm: theme.defaultAlgorithm,
-            token: {
-              // colorPrimary: '#00b96b',
-              // colorBgMask: '#000',
-              // fontSize: 24,
-            },
-          }}>
-          <Layout>
-            <Header>
-              <AppHeader switchTheme={switchTheme} isDarkMode={isDarkMode} />
-            </Header>
-            <Content>
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                <Route path='/about-us' element={<AboutUs />} />
-                <Route path='/contact-us' element={<ContactUs />} />
-              </Routes>
-            </Content>
-            <Footer
-              style={{
-                textAlign: 'center',
-                backgroundColor: 'black',
-                backgroundImage: `url(${footerbg})`,
-              }}>
-              <AppFooter />
-            </Footer>
-          </Layout>
-        </ConfigProvider>
-      ) : (
-        <ConfigProvider
-          theme={{
-            algorithm: theme.darkAlgorithm,
-            token: {
-              // colorPrimary: '#00b96b',
-              // colorBgMask: '#000',
-              // fontSize: 24,
-            },
-          }}>
-          <Layout>
-            <Header>
-              <AppHeader />
-            </Header>
-            <Content>
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                <Route path='/about-us' element={<AboutUs />} />
-                <Route path='/contact-us' element={<ContactUs />} />
-              </Routes>
-            </Content>
-            <Footer
-              style={{
-                textAlign: 'center',
-                backgroundColor: 'black',
-                backgroundImage: `url(${footerbg})`,
-              }}>
-              <AppFooter />
-            </Footer>
-          </Layout>
-        </ConfigProvider>
-      )}
+      <ConfigProvider
+        theme={{
+          algorithm: theme.defaultAlgorithm,
+          token: {
+            // colorPrimary: '#00b96b',
+            // colorBgMask: '#000',
+            // fontSize: 24,
+          },
+        }}>
+        <Layout>
+          <Header>
+            <AppHeader />
+          </Header>
+          <Content>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/about-us' element={<AboutUs />} />
+              <Route path='/contact-us' element={<ContactUs />} />
+            </Routes>
+          </Content>
+          <Footer
+            style={{
+              textAlign: 'center',
+              backgroundColor: 'black',
+              backgroundImage: `url(${footerbg})`,
+            }}>
+            <AppFooter />
+          </Footer>
+        </Layout>
+      </ConfigProvider>
     </div>
   );
 }

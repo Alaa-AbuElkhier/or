@@ -3,8 +3,6 @@ import { Row, Col, Button, Typography, Form, Input, Select } from 'antd';
 import { useMediaQuery } from 'react-responsive';
 
 import contactUsBg from '../../assets/contactUsBg.png';
-import contactUs1 from '../../assets/contactUs1.png';
-import home3 from '../../assets/home3.png';
 const { Option } = Select;
 const { Paragraph } = Typography;
 

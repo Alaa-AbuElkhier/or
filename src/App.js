@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage/HomePage';
 import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
 import ContactUs from './pages/ContactUsPage/ContactUs';
+import FaqPage from './pages/FaqPage/FaqPage';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path='/' element={<HomePage />} />
               <Route path='/about-us' element={<AboutUs />} />
               <Route path='/contact-us' element={<ContactUs />} />
+              <Route path='/faq' element={<FaqPage />} />
             </Routes>
           </Content>
           <Footer

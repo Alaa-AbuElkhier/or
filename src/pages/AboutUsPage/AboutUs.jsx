@@ -7,92 +7,126 @@ import home3 from '../../assets/home3.png';
 const { Option } = Select;
 const { Paragraph } = Typography;
 
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-
 function AboutUs() {
-  const [form] = Form.useForm();
-  const onGenderChange = (value) => {
-    switch (value) {
-      case 'male':
-        form.setFieldsValue({
-          note: 'Hi, man!',
-        });
-        return;
-      case 'female':
-        form.setFieldsValue({
-          note: 'Hi, lady!',
-        });
-        return;
-      case 'other':
-        form.setFieldsValue({
-          note: 'Hi there!',
-        });
-        break;
-      default:
-    }
-  };
-  const onFinish = (values) => {
-    console.log(values);
-  };
-  const onReset = () => {
-    form.resetFields();
-  };
-  const onFill = () => {
-    form.setFieldsValue({
-      note: 'Hello world!',
-      gender: 'male',
-    });
-  };
   return (
-    <section
-      className='header-shape'
-      style={{
-        background: 'white',
-      }}>
-      <Row justify={'end'}>
-        <Col span={12}>
-          <Typography.Title
-            level={1}
-            style={{
-              color: 'black',
-              marginTop: '160px',
-              marginRight: '80px',
-            }}>
-            Orderitto Helps You Build <br />A Successful Online Store
-          </Typography.Title>
-        </Col>
-        <Col span={12}>
-          {' '}
-          <div
-            style={
-              {
-                // background: 'white',
-              }
-            }>
-            <img
-              src={aboutUsBg}
+    <>
+      <section
+        className='header-shape'
+        style={{
+          background: 'white',
+        }}>
+        <Row justify={'center'}>
+          <Col span={12}>
+            <Typography.Title
+              level={1}
               style={{
-                width: '95%',
-              }}
-              alt='aboutUsBg'
-            />
-          </div>
-        </Col>
-      </Row>
-    </section>
+                color: 'black',
+                marginTop: '160px',
+                // marginRight: '80px',
+              }}>
+              Orderitto Helps You Build <br />A Successful Online Store
+            </Typography.Title>
+            <Row justify={'center'}>
+              <ul style={{ fontSize: 20, textAlign: 'left' }}>
+                <li style={{ marginBottom: 20 }}>
+                  Orderitto has a specialized team that not only <br />
+                  helps you build your online store, but guides <br />
+                  you through your e-commerce journey to help <br /> you grow.
+                </li>
+                <li style={{ marginBottom: 20 }}>
+                  Orderitto platform doesn’t require any <br />
+                  technical expertise and offers payment and
+                  <br /> shipment integrations.
+                </li>
+                <li style={{ marginBottom: 20 }}>
+                  It’s totally <b>free, NO</b> trial periods or anything.
+                </li>
+              </ul>
+            </Row>
+          </Col>
+          <Col span={12}>
+            {' '}
+            <div
+              style={
+                {
+                  // background: 'white',
+                }
+              }>
+              <img
+                src={aboutUsBg}
+                style={{
+                  width: '95%',
+                }}
+                alt='aboutUsBg'
+              />
+            </div>
+          </Col>
+        </Row>
+      </section>
+      <section
+        className='header-shape'
+        style={{
+          background: 'white',
+        }}>
+        <Row justify={'start'}>
+          <Col
+            span={12}
+            style={{
+              marginTop: '100px',
+              marginBottom: '100px',
+            }}>
+            {' '}
+            <div
+              style={
+                {
+                  // background: 'white',
+                }
+              }>
+              <img
+                src={home3}
+                style={{
+                  width: '500px',
+                }}
+                alt='home3'
+              />
+            </div>
+          </Col>
+
+          <Col
+            span={12}
+            style={{
+              marginTop: '100px',
+              marginBottom: '100px',
+            }}>
+            <Row justify={'start'}>
+              {' '}
+              <Typography.Title
+                level={1}
+                style={{
+                  color: 'black',
+                  textAlign: 'left',
+
+                  // marginRight: '80px',
+                }}>
+                Our Mission is to Help Your <br />
+                Business Thrive
+              </Typography.Title>
+            </Row>
+
+            <Row justify={'start'}>
+              <Paragraph style={{ fontSize: 20, textAlign: 'left' }}>
+                With Orderitto, you can easily create an online store
+                <br /> that has amazing features such as promotions, custom{' '}
+                <br /> domains, and even a full-functioning mobile app to
+                <br /> help you efficiently process orders both on iOS and{' '}
+                <br />
+                Android.
+              </Paragraph>
+            </Row>
+          </Col>
+        </Row>
+      </section>
+    </>
   );
 }
 

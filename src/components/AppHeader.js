@@ -83,7 +83,7 @@ function AppHeader({ switchTheme, isDarkMode }) {
     },
     {
       label: (
-        <a href='/about-us' rel='noopener noreferrer'>
+        <a href='/faq' rel='noopener noreferrer'>
           FAQ
         </a>
       ),
@@ -111,7 +111,9 @@ function AppHeader({ switchTheme, isDarkMode }) {
     <div>
       <div className='container'>
         <div className='logo'>
-          <img src={logo} alt='Logo' />
+          <a href='/' rel='noopener noreferrer'>
+            <img src={logo} alt='Logo' />
+          </a>
         </div>
         <Row>
           <Col span={14}>

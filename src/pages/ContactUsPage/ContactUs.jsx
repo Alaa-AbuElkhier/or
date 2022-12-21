@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Typography, Form, Input, Select } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import contactUsBg from '../../assets/contactUsBg.png';
 import contactUs1 from '../../assets/contactUs1.png';
@@ -15,14 +16,9 @@ const layout = {
     span: 16,
   },
 };
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
 
 function ContactUs() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
@@ -30,25 +26,33 @@ function ContactUs() {
   };
 
   return (
-    <section
-      className='header-shape'
-      style={{
-        background: 'white',
-      }}>
-      <Row>
-        <Col span={10}>
+    <>
+      {isTabletOrMobile ? (
+        <section
+          style={{
+            background: 'white',
+          }}>
           <Row justify={'center'}>
+            <img
+              src={contactUsBg}
+              style={{
+                width: '300px',
+                marginTop: '90px',
+              }}
+              alt='contactUsBg'
+            />
+          </Row>
+          <Row justify={'center'}>
+            {' '}
             <Typography.Title
-              level={1}
+              level={2}
               style={{
                 color: 'black',
-                marginTop: '160px',
-                marginRight: '80px',
+                marginTop: '30px',
               }}>
               Let's get in touch
             </Typography.Title>
           </Row>
-
           <Row justify={'center'}>
             {' '}
             <Form
@@ -58,88 +62,164 @@ function ContactUs() {
               onFinish={onFinish}>
               <Form.Item name='name'>
                 <Row>
-                  <Col>
-                    {' '}
-                    <label>Name</label>
-                  </Col>
-                  <Col>
-                    {' '}
-                    <Input size='large' style={{ width: '280px' }} />
-                  </Col>
+                  <label>Name</label>
+                </Row>
+                <Row>
+                  {' '}
+                  <Input size='large' style={{ width: '280px' }} />
                 </Row>
               </Form.Item>
               <Form.Item name='phone-number'>
                 <Row>
-                  <Col>
-                    {' '}
-                    <label>Phone Number</label>
-                  </Col>
-                  <Col>
-                    {' '}
-                    <Input size='large' style={{ width: '280px' }} />
-                  </Col>
+                  <label>Phone Number</label>
+                </Row>
+                <Row>
+                  {' '}
+                  <Input size='large' style={{ width: '280px' }} />
                 </Row>
               </Form.Item>
               <Form.Item name='store-name'>
                 <Row>
-                  <Col>
-                    {' '}
-                    <label>Store Name</label>
-                  </Col>
-                  <Col>
-                    {' '}
-                    <Input size='large' style={{ width: '280px' }} />
-                  </Col>
+                  <label>Store Name</label>
+                </Row>
+                <Row>
+                  {' '}
+                  <Input size='large' style={{ width: '280px' }} />
                 </Row>
               </Form.Item>
               <Form.Item name='category'>
                 <Row>
-                  <Col>
-                    {' '}
-                    <label>Category</label>
-                  </Col>
-                  <Col>
-                    {' '}
-                    <Input size='large' style={{ width: '280px' }} />
-                  </Col>
+                  <label>Category</label>
+                </Row>
+                <Row>
+                  {' '}
+                  <Input size='large' style={{ width: '280px' }} />
                 </Row>
               </Form.Item>
-              <Row justify={'start'}>
+              <Row justify={'center'}>
                 {' '}
-                <Form.Item {...tailLayout}>
-                  <Button
-                    type='primary'
-                    htmlType='submit'
-                    size='large'
-                    style={{
-                      marginRight: '-125px',
-                    }}>
+                <Form.Item>
+                  <Button type='primary' htmlType='submit' size='large'>
                     GET IN TOUCH
                   </Button>
                 </Form.Item>
               </Row>
             </Form>
           </Row>
-        </Col>
-        <Col span={12}>
-          {' '}
-          <div
-            style={
-              {
-                // background: 'white',
-              }
-            }>
-            <img
-              src={contactUsBg}
-              style={{
-                width: '95%',
-              }}
-              alt='contactUsBg'
-            />
-          </div>
-        </Col>
-      </Row>
-    </section>
+        </section>
+      ) : (
+        <section
+          className='header-shape'
+          style={{
+            background: 'white',
+          }}>
+          <Row>
+            <Col span={10}>
+              <Row justify={'center'}>
+                <Typography.Title
+                  level={1}
+                  style={{
+                    color: 'black',
+                    marginTop: '160px',
+                    marginRight: '80px',
+                  }}>
+                  Let's get in touch
+                </Typography.Title>
+              </Row>
+
+              <Row justify={'center'}>
+                {' '}
+                <Form
+                  {...layout}
+                  form={form}
+                  name='control-hooks'
+                  onFinish={onFinish}>
+                  <Form.Item name='name'>
+                    <Row>
+                      <Col>
+                        {' '}
+                        <label>Name</label>
+                      </Col>
+                      <Col>
+                        {' '}
+                        <Input size='large' style={{ width: '280px' }} />
+                      </Col>
+                    </Row>
+                  </Form.Item>
+                  <Form.Item name='phone-number'>
+                    <Row>
+                      <Col>
+                        {' '}
+                        <label>Phone Number</label>
+                      </Col>
+                      <Col>
+                        {' '}
+                        <Input size='large' style={{ width: '280px' }} />
+                      </Col>
+                    </Row>
+                  </Form.Item>
+                  <Form.Item name='store-name'>
+                    <Row>
+                      <Col>
+                        {' '}
+                        <label>Store Name</label>
+                      </Col>
+                      <Col>
+                        {' '}
+                        <Input size='large' style={{ width: '280px' }} />
+                      </Col>
+                    </Row>
+                  </Form.Item>
+                  <Form.Item name='category'>
+                    <Row>
+                      <Col>
+                        {' '}
+                        <label>Category</label>
+                      </Col>
+                      <Col>
+                        {' '}
+                        <Input size='large' style={{ width: '280px' }} />
+                      </Col>
+                    </Row>
+                  </Form.Item>
+                  <Row justify={'start'}>
+                    {' '}
+                    <Form.Item>
+                      <Button
+                        type='primary'
+                        htmlType='submit'
+                        size='large'
+                        style={{
+                          marginRight: '-125px',
+                        }}>
+                        GET IN TOUCH
+                      </Button>
+                    </Form.Item>
+                  </Row>
+                </Form>
+              </Row>
+            </Col>
+            <Col span={12}>
+              {' '}
+              <div
+                style={
+                  {
+                    // background: 'white',
+                  }
+                }>
+                <img
+                  src={contactUsBg}
+                  style={{
+                    width: '95%',
+                  }}
+                  alt='contactUsBg'
+                />
+              </div>
+            </Col>
+          </Row>
+        </section>
+      )}
+    </>
   );
 }
 

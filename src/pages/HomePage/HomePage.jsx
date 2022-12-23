@@ -22,7 +22,7 @@ import AboutUs from '../AboutUsPage/AboutUs';
 const { Header, Footer, Sider, Content } = Layout;
 const { Paragraph } = Typography;
 
-function HomePage() {
+function HomePage({ darkMode }) {
   return (
     <div>
       <Layout>
@@ -30,15 +30,15 @@ function HomePage() {
           <AppHeader></AppHeader>
         </Header> */}
         <Content>
-          <HomeSlider />
-          <HowItWork />
-          <ManageYourLife />
-          <ServicesweProvide />
-          <FeaturesYouWillGet />
-          <LifetimeUpdates />
-          <ClientsTestimonials />
-          <OurPricingPlans />
-          <GetYourBusinessApp />
+          <HomeSlider darkMode={darkMode} />
+          <HowItWork darkMode={darkMode} />
+          <ManageYourLife darkMode={darkMode} />
+          <ServicesweProvide darkMode={darkMode} />
+          <FeaturesYouWillGet darkMode={darkMode} />
+          <LifetimeUpdates darkMode={darkMode} />
+          <ClientsTestimonials darkMode={darkMode} />
+          <OurPricingPlans darkMode={darkMode} />
+          <GetYourBusinessApp darkMode={darkMode} />
         </Content>
         {/* <Footer
           style={{

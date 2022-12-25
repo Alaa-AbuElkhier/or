@@ -12,6 +12,7 @@ import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
 import ContactUs from './pages/ContactUsPage/ContactUs';
 import FaqPage from './pages/FaqPage/FaqPage';
+import ServicesShopping from './pages/ServicesShopping/ServicesShopping';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
@@ -58,6 +59,11 @@ function App() {
                   element={<ContactUs darkMode={darkMode} />}
                 />
                 <Route path='/faq' element={<FaqPage darkMode={darkMode} />} />
+
+                <Route
+                  path='/services-shopping'
+                  element={<ServicesShopping />}
+                />
               </Routes>
             </Content>
 
@@ -95,6 +101,7 @@ function App() {
               <Route path='/about-us' element={<AboutUs />} />
               <Route path='/contact-us' element={<ContactUs />} />
               <Route path='/faq' element={<FaqPage />} />
+              <Route path='/services-shopping' element={<ServicesShopping />} />
             </Routes>
           </Content>
           <Footer

@@ -36,40 +36,22 @@ function AppHeader({ darkMode, setDarkMode }) {
       key: 'about-us',
     },
     {
-      label: (
-        <a href='/about-us' rel='noopener noreferrer'>
-          Services
-        </a>
-      ),
+      label: 'Services',
       key: 'contact-us',
       children: [
         {
-          type: 'group',
-          label: 'Item 1',
-          children: [
-            {
-              label: 'Option 1',
-              key: 'setting:1',
-            },
-            {
-              label: 'Option 2',
-              key: 'setting:2',
-            },
-          ],
+          label: (
+            <a href='/services-shopping' rel='noopener noreferrer'>
+              Shopping
+            </a>
+          ),
         },
         {
-          type: 'group',
-          label: 'Item 2',
-          children: [
-            {
-              label: 'Option 3',
-              key: 'setting:3',
-            },
-            {
-              label: 'Option 4',
-              key: 'setting:4',
-            },
-          ],
+          label: (
+            <a href='/services-shopping' rel='noopener noreferrer'>
+              Medical
+            </a>
+          ),
         },
       ],
     },

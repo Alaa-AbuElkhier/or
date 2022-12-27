@@ -115,18 +115,20 @@ code {
     background-position: center center;
     overflow: hidden!important;
   }
-
-  :where(.css-dev-only-do-not-override-26rdvq).ant-layout .ant-layout-header {
+  
+:where(.css-dev-only-do-not-override-92hl6j).ant-layout .ant-layout-header {
   position:absolute;
-   background-color: transparent;
-   right: 0;
-   left: 0;
-   top: 0;
-   z-index: 999;
-   border: 0;
-   -webkit-transition: all .5s ease;
-   transition: all .5s ease;
+  background-color: transparent;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  border: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
+
+
 :where(.css-dev-only-do-not-override-26rdvq).ant-menu-dark {
   color: rgb(255, 255, 255);
   background-color: transparent;
@@ -148,10 +150,14 @@ code {
   position: absolute;
   margin-top: 74px;
   margin-left: -100px;
-  -webkit-transform: rotate(188deg);
+  -webkit-transform: rotate(188deg);}
 
 
-
+  :where(.css-dev-only-do-not-override-92hl6j).ant-menu-light .ant-menu-item a:hover {
+    color: #978D8D;
+}
+:where(.css-dev-only-do-not-override-92hl6j).ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: #978D8D;
 }
 /* .slide-curve{
   background: #F3F3F3;
@@ -163,3 +169,4 @@ code {
     position: absolute;
     transform: translate(1603px, -235px);
 } */
+

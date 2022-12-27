@@ -41,6 +41,7 @@ function App() {
             algorithm: theme.darkAlgorithm,
             token: {
               colorPrimary: '#63A3DC',
+              colorLinkHover: 'red',
               // colorBgMask: '#303030',
               // colorPrimaryBg: '#303030',
               colorBgBase: '#111010',
@@ -144,6 +145,7 @@ function App() {
         theme={{
           algorithm: theme.defaultAlgorithm,
           token: {
+            colorLinkHover: '#fff',
             // colorPrimary: '#00b96b',
             // colorBgMask: '#000',
             // fontSize: 24,

@@ -52,7 +52,7 @@ function AppHeader({
     },
     {
       label: 'Services',
-      key: 'contact-us',
+      key: 'service',
       children: [
         {
           label: (
@@ -150,6 +150,7 @@ function AppHeader({
             <div className='nav-menu'>
               {darkMode ? (
                 <Menu
+                  theme='dark'
                   style={{
                     backgroundColor: 'transparent',
                     color: '#978D8D',
@@ -161,9 +162,10 @@ function AppHeader({
                 />
               ) : (
                 <Menu
+                  className='light-menu'
                   style={{
                     backgroundColor: 'transparent',
-                    color: '#978D8D',
+                    color: 'white',
                     borderColor: 'transparent',
                   }}
                   mode='horizontal'

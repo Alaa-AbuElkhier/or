@@ -21,7 +21,7 @@ const { Header, Footer, Sider, Content } = Layout;
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [logoTheme, setLogoTheme] = useState('light');
-  const [themes, setThemes] = useState('');
+  const [themes, setThemes] = useState('light');
 
   //Switch theme function
   const switchTheme = (darkMode) => {
@@ -32,8 +32,18 @@ function App() {
       setThemes('light');
     }
   };
+  //save value on local storage
 
-  if (darkMode) {
+  const setThemeInStorage = (theme) => {
+    localStorage.setItem('theme', theme);
+  };
+  setThemeInStorage(themes);
+  const getThemeInStorage = () => {
+    return localStorage.getItem('theme'); // returns 'light' in this case
+  };
+  const theme = getThemeInStorage();
+  console.log(theme);
+  if (theme === 'dark') {
     return (
       <div className='App'>
         <ConfigProvider

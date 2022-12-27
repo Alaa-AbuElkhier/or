@@ -153,7 +153,12 @@ function HowItWork({ darkMode }) {
                     <Row justify={'start'}>
                       <Col>
                         {' '}
-                        <Button type='primary' size='large'>
+                        <Button
+                          style={{
+                            width: '170px',
+                          }}
+                          type='primary'
+                          size='large'>
                           START NOW
                         </Button>
                       </Col>
@@ -307,7 +312,12 @@ function HowItWork({ darkMode }) {
                   <Row justify={'start'}>
                     <Col>
                       {' '}
-                      <Button type='primary' size='large'>
+                      <Button
+                        style={{
+                          width: '170px',
+                        }}
+                        type='primary'
+                        size='large'>
                         START NOW
                       </Button>
                     </Col>

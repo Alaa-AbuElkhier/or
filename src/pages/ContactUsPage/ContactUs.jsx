@@ -15,8 +15,9 @@ const layout = {
   },
 };
 
-function ContactUs({ darkMode }) {
+function ContactUs({ darkMode, setThemes }) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  setThemes('dark');
   const [form] = Form.useForm();
 
   const onFinish = (values) => {

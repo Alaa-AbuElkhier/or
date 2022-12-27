@@ -136,7 +136,7 @@ function HomeSlider({ darkMode }) {
                     <Row
                       align={'middle'}
                       style={{
-                        background: '#F3F3F3',
+                        background: '#F3F9F3',
                         paddingTop: '150px',
                         borderBottomLeftRadius: '40%',
                       }}>

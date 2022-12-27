@@ -19,13 +19,28 @@ import {
 
 import logo from '../assets/logo.png';
 import darkLogo from '../assets/darkLogo.png';
-import footerbg from '../assets/footerbg.png';
-import home3 from '../assets/home3.png';
+import shoppingLogo from '../assets/images/services/shoppingLogo.png';
+import medicalLogo from '../assets/images/services/medicalLogo.png';
 
 const { Header, Content, Footer } = Layout;
 const { Paragraph, Text } = Typography;
 
-function AppHeader({ darkMode, setDarkMode }) {
+function AppHeader({
+  darkMode,
+  setDarkMode,
+  setLogoTheme,
+  logoTheme,
+  onChange,
+  switchTheme,
+  themes,
+}) {
+  // const setTemeName = (darkMode) => {
+  //   setDarkMode(darkMode);
+  //   if (darkMode === true) {
+  //     setLogoTheme('dark');
+  //     console.log(logoTheme);
+  //   }
+  // };
   const items = [
     {
       label: (
@@ -48,7 +63,7 @@ function AppHeader({ darkMode, setDarkMode }) {
         },
         {
           label: (
-            <a href='/services-shopping' rel='noopener noreferrer'>
+            <a href='/services-medical' rel='noopener noreferrer'>
               Medical
             </a>
           ),
@@ -57,7 +72,7 @@ function AppHeader({ darkMode, setDarkMode }) {
     },
     {
       label: (
-        <a href='/about-us' rel='noopener noreferrer'>
+        <a href='/pricing' rel='noopener noreferrer'>
           Pricing
         </a>
       ),
@@ -93,15 +108,41 @@ function AppHeader({ darkMode, setDarkMode }) {
     <div>
       <div className='container'>
         <div className='logo'>
-          {darkMode ? (
-            <a href='/' rel='noopener noreferrer'>
-              <img src={darkLogo} alt='Logo' />
-            </a>
-          ) : (
-            <a href='/' rel='noopener noreferrer'>
-              <img src={logo} alt='Logo' />
-            </a>
-          )}
+          {(() => {
+            switch (themes) {
+              case 'dark':
+                return (
+                  <a href='/' rel='noopener noreferrer'>
+                    <img src={darkLogo} alt='Logo' />
+                  </a>
+                );
+              case 'light':
+                return (
+                  <a href='/' rel='noopener noreferrer'>
+                    <img src={logo} alt='Logo' />
+                  </a>
+                );
+              case 'pink':
+                return (
+                  <a href='/' rel='noopener noreferrer'>
+                    <img src={shoppingLogo} alt='Logo' />
+                  </a>
+                );
+              case 'blue':
+                return (
+                  <a href='/' rel='noopener noreferrer'>
+                    <img src={medicalLogo} alt='Logo' />
+                  </a>
+                );
+
+              default:
+                return (
+                  <a href='/' rel='noopener noreferrer'>
+                    <img src={logo} alt='Logo' />
+                  </a>
+                );
+            }
+          })()}
         </div>
         <Row>
           <Col span={14}>
@@ -137,7 +178,7 @@ function AppHeader({ darkMode, setDarkMode }) {
               checkedChildren='Dark'
               unCheckedChildren='Light'
               checked={darkMode}
-              onChange={setDarkMode}
+              onChange={switchTheme}
             />
           </Col>
           <Col xs={0} sm={0} md={0} lg={2} xl={3}>

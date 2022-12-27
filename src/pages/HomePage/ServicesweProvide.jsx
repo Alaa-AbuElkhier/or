@@ -556,30 +556,31 @@ function ServicesweProvide({ darkMode }) {
                 background: 'black',
                 backgroundImage: `url(${orderittobg})`,
                 width: '100%',
+                height: '200px',
               }}>
-              <Row align={'middle'}>
+              <Row justify={'center'}>
                 {' '}
-                <Col span={2}>
+                <Col span={3}>
                   {' '}
                   <img
                     src={logo}
                     style={{
-                      width: '90%',
+                      width: '150px',
                       marginTop: '-16px',
                       marginLeft: '48px',
                     }}
                     alt='logo'
                   />
                 </Col>
-                <Col span={14}>
+                <Col>
                   {' '}
                   <Typography.Title
                     level={2}
                     style={{
                       color: 'white',
                     }}>
-                    is the fastest & easiest way to build the best online store
-                    in the MENA region
+                    is the fastest & easiest way to build the best online <br />{' '}
+                    store in the MENA region
                   </Typography.Title>
                 </Col>
                 <Col align={'middle'}>

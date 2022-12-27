@@ -14,3 +14,77 @@
         
         </Col>
       </Row>
+
+
+
+      {darkMode ? (
+        <a href='/' rel='noopener noreferrer'>
+          <img src={darkLogo} alt='Logo' />
+        </a>
+      ) : (
+        <a href='/' rel='noopener noreferrer'>
+          <img src={logo} alt='Logo' />
+        </a>
+      )}
+
+
+
+
+
+      const setThemeInStorage = (theme) => {
+        localStorage.setItem('theme', theme)
+     }
+     setThemeInStorage('light')
+     const getThemeInStorage = () => {
+        localStorage.getItem('theme') // returns 'light' in this case
+     }
+     const theme = getThemeInStorage()
+
+
+      {darkMode ? (
+            <a href='/' rel='noopener noreferrer'>
+              <img src={darkLogo} alt='Logo' />
+            </a>
+          ) : (
+            <a href='/' rel='noopener noreferrer'>
+              <img src={logo} alt='Logo' />
+            </a>
+          )}
+
+
+
+
+
+
+
+
+            useEffect(() => {
+    if (darkMode) {
+      console.log(darkMode);
+      setThemes('dark');
+    } else {
+      console.log(darkMode);
+      setThemes('light');
+    }
+  }, [darkMode]);
+  console.log(themes);
+
+  // save theme value in local storage
+  const setThemeInStorage = (theme) => {
+    localStorage.setItem('theme', theme);
+  };
+  setThemeInStorage(darkMode);
+  const getThemeInStorage = () => {
+    return localStorage.getItem('theme'); // returns 'light' in this case
+  };
+  const theme = getThemeInStorage();
+  // const [theme, setTheme] = useState('');
+
+  // const onChange = () => {
+  //   setDarkMode(!darkMode);
+  //   if (!darkMode) {
+  //     setThemeInStorage('dark');
+  //   } else {
+  //     setThemeInStorage('light');
+  //   }
+  // };

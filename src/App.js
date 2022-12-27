@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import logo from './logo.svg';
 import './App.css';
@@ -13,10 +13,25 @@ import AppFooter from './components/AppFooter';
 import ContactUs from './pages/ContactUsPage/ContactUs';
 import FaqPage from './pages/FaqPage/FaqPage';
 import ServicesShopping from './pages/ServicesShopping/ServicesShopping';
+import ServicesMedical from './pages/ServicesMedical/ServicesMedical';
+import PricingPage from './pages/PricingPage/PricingPage';
+import PricingPlan from './pages/PricingPage/PricingPlan';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [logoTheme, setLogoTheme] = useState('light');
+  const [themes, setThemes] = useState('');
+
+  //Switch theme function
+  const switchTheme = (darkMode) => {
+    setDarkMode(darkMode);
+    if (darkMode) {
+      setThemes('dark');
+    } else {
+      setThemes('light');
+    }
+  };
 
   if (darkMode) {
     return (
@@ -45,24 +60,67 @@ function App() {
 
                 border: 0,
               }}>
-              <AppHeader darkMode={darkMode} setDarkMode={setDarkMode} />
+              <AppHeader
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+                logoTheme={logoTheme}
+                setLogoTheme={setLogoTheme}
+                // onChange={onChange}
+                switchTheme={switchTheme}
+                themes={themes}
+              />
             </Header>
             <Content>
               <Routes>
                 <Route path='/' element={<HomePage darkMode={darkMode} />} />
                 <Route
                   path='/about-us'
-                  element={<AboutUs darkMode={darkMode} />}
+                  element={
+                    <AboutUs darkMode={darkMode} setThemes={setThemes} />
+                  }
                 />
                 <Route
                   path='/contact-us'
-                  element={<ContactUs darkMode={darkMode} />}
+                  element={
+                    <ContactUs darkMode={darkMode} setThemes={setThemes} />
+                  }
                 />
-                <Route path='/faq' element={<FaqPage darkMode={darkMode} />} />
+                <Route
+                  path='/faq'
+                  element={
+                    <FaqPage darkMode={darkMode} setThemes={setThemes} />
+                  }
+                />
 
                 <Route
                   path='/services-shopping'
-                  element={<ServicesShopping />}
+                  element={
+                    <ServicesShopping
+                      setThemes={setThemes}
+                      darkMode={darkMode}
+                    />
+                  }
+                />
+                <Route
+                  path='/services-medical'
+                  element={
+                    <ServicesMedical
+                      setThemes={setThemes}
+                      darkMode={darkMode}
+                    />
+                  }
+                />
+                <Route
+                  path='/pricing'
+                  element={
+                    <PricingPage setThemes={setThemes} darkMode={darkMode} />
+                  }
+                />
+                <Route
+                  path='/pricing-plan'
+                  element={
+                    <PricingPlan setThemes={setThemes} darkMode={darkMode} />
+                  }
                 />
               </Routes>
             </Content>
@@ -93,15 +151,52 @@ function App() {
         }}>
         <Layout>
           <Header>
-            <AppHeader darkMode={darkMode} setDarkMode={setDarkMode} />
+            <AppHeader
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+              logoTheme={logoTheme}
+              setLogoTheme={setLogoTheme}
+              // onChange={onChange}
+              switchTheme={switchTheme}
+              themes={themes}
+            />
           </Header>
           <Content>
             <Routes>
               <Route path='/' element={<HomePage darkMode={darkMode} />} />
-              <Route path='/about-us' element={<AboutUs />} />
-              <Route path='/contact-us' element={<ContactUs />} />
-              <Route path='/faq' element={<FaqPage />} />
-              <Route path='/services-shopping' element={<ServicesShopping />} />
+              <Route
+                path='/about-us'
+                element={<AboutUs setThemes={setThemes} />}
+              />
+              <Route
+                path='/contact-us'
+                element={<ContactUs setThemes={setThemes} />}
+              />
+              <Route path='/faq' element={<FaqPage setThemes={setThemes} />} />
+              <Route
+                path='/services-shopping'
+                element={
+                  <ServicesShopping setThemes={setThemes} darkMode={darkMode} />
+                }
+              />
+              <Route
+                path='/services-medical'
+                element={
+                  <ServicesMedical setThemes={setThemes} darkMode={darkMode} />
+                }
+              />
+              <Route
+                path='/pricing'
+                element={
+                  <PricingPage setThemes={setThemes} darkMode={darkMode} />
+                }
+              />
+              <Route
+                path='/pricing-plan'
+                element={
+                  <PricingPlan setThemes={setThemes} darkMode={darkMode} />
+                }
+              />
             </Routes>
           </Content>
           <Footer

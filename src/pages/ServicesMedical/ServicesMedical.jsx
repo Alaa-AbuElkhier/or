@@ -3,18 +3,19 @@ import { Layout, Row, Col, Button, Typography, Card } from 'antd';
 
 import { useMediaQuery } from 'react-responsive';
 
-import servicesSoppingBg from '../../assets/images/services/servicesSoppingBg.png';
-import servicesSoppingBgDark from '../../assets/images/services/servicesSoppingBgDark.png';
+import servicesMedicalBg from '../../assets/images/services/servicesMedicalBg.png';
+import servicesMedicalBgDark from '../../assets/images/services/servicesMedicalBgDark.png';
 import cardImg from '../../assets/images/services/cardImg.png';
-import service1 from '../../assets/images/services/service1.png';
+import service3 from '../../assets/images/services/service3.png';
 import service2 from '../../assets/images/services/service2.png';
+import service3Dark from '../../assets/images/services/service3Dark.png';
 
 const { Header, Content, Footer } = Layout;
 const { Paragraph, Text } = Typography;
 
-function ServicesShopping({ setThemes, darkMode }) {
+function ServicesMedical({ setThemes, darkMode }) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  setThemes('pink');
+  setThemes('blue');
   if (darkMode) {
     return (
       <>
@@ -24,7 +25,7 @@ function ServicesShopping({ setThemes, darkMode }) {
             {/* First Section */}
             <div
               style={{
-                backgroundImage: `url(${servicesSoppingBg})`,
+                backgroundImage: `url(${servicesMedicalBg})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 height: '500px',
@@ -59,14 +60,14 @@ function ServicesShopping({ setThemes, darkMode }) {
                 <Button
                   style={{
                     backgroundColor: 'transparent',
-                    borderColor: '#FF4693',
+                    borderColor: '#01ACEB',
                     marginRight: '20px',
                   }}
                   size='middle'>
                   Check the Demo Version
                 </Button>
                 <Button
-                  style={{ backgroundColor: '#FF4693', color: 'white' }}
+                  style={{ backgroundColor: '#01ACEB', color: 'white' }}
                   size='middle'>
                   Register Now
                 </Button>
@@ -77,6 +78,19 @@ function ServicesShopping({ setThemes, darkMode }) {
               style={{
                 marginBottom: '100px',
               }}>
+              <Row
+                justify={'center'}
+                style={{
+                  marginBottom: '30px',
+                }}>
+                <Typography.Title
+                  style={{
+                    color: '#01ACEB',
+                  }}
+                  level={4}>
+                  Free Professional Services
+                </Typography.Title>
+              </Row>
               <Row justify={'center'}>
                 <Card
                   style={{
@@ -305,11 +319,11 @@ function ServicesShopping({ setThemes, darkMode }) {
               </Row>
               <Row justify={'center'}>
                 <img
-                  src={service1}
+                  src={service3}
                   style={{
                     width: ' 400px',
                   }}
-                  alt='service1'
+                  alt='service3'
                 />
               </Row>
             </div>
@@ -319,7 +333,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 <Col span={22}>
                   <Text
                     style={{
-                      color: '#FF4693',
+                      color: '#01ACEB',
                       textAlign: 'left',
                       fontWeight: 'bold',
                       fontSize: 17,
@@ -371,7 +385,7 @@ function ServicesShopping({ setThemes, darkMode }) {
             {/* First Section */}
             <div
               style={{
-                backgroundImage: `url(${servicesSoppingBgDark})`,
+                backgroundImage: `url(${servicesMedicalBgDark})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 height: '1050px',
@@ -386,7 +400,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     <Typography.Title
                       level={1}
                       style={{
-                        color: 'white ',
+                        color: 'white',
                         marginTop: '160px',
                         marginRight: '80px',
                         textAlign: 'left',
@@ -398,7 +412,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                   <Row>
                     <Paragraph
                       style={{
-                        color: 'white ',
+                        color: 'white',
                         textAlign: 'left',
                         fontSize: 20,
                       }}>
@@ -412,14 +426,14 @@ function ServicesShopping({ setThemes, darkMode }) {
                     <Button
                       style={{
                         backgroundColor: 'transparent',
-                        borderColor: '#FF4693',
+                        borderColor: '#01ACEB',
                         marginRight: '20px',
                       }}
                       size='large'>
                       Check the Demo Version
                     </Button>
                     <Button
-                      style={{ backgroundColor: '#FF4693', color: 'white' }}
+                      style={{ backgroundColor: '#01ACEB', color: 'white' }}
                       size='large'>
                       Register Now
                     </Button>
@@ -429,6 +443,15 @@ function ServicesShopping({ setThemes, darkMode }) {
             </div>
             {/* Second Section  */}
             <div style={{ marginTop: '150px' }}>
+              <Row style={{ marginBottom: '50px' }} justify='center'>
+                <Typography.Title
+                  level={1}
+                  style={{
+                    color: '#01ACEB',
+                  }}>
+                  Free Professional Services
+                </Typography.Title>
+              </Row>
               <Row justify={'center'}>
                 <Col style={{ marginRight: '30px' }}>
                   <Row justify={'center'}>
@@ -461,7 +484,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white',
+                            color: 'white ',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -614,10 +637,9 @@ function ServicesShopping({ setThemes, darkMode }) {
               <Row>
                 <Col span={12}>
                   <img
-                    src={service1}
+                    src={service3Dark}
                     style={{
-                      width: '1139px',
-                      transform: 'scaleX(-1)',
+                      width: '90%',
                     }}
                     alt='home4Res'
                   />
@@ -650,15 +672,14 @@ function ServicesShopping({ setThemes, darkMode }) {
                       scrambled it to make a type specimen book.
                     </Paragraph>
                   </Row>
-                  <Row>
+                  <Row justify={'end'}>
                     <img
                       src={service2}
                       style={{
                         width: ' 500px',
                         transform: 'scaleX(-1)',
-                        marginLeft: '400px',
                       }}
-                      alt='service1'
+                      alt='service3'
                     />
                   </Row>
                 </Col>
@@ -712,12 +733,12 @@ function ServicesShopping({ setThemes, darkMode }) {
                       size='large'
                       href='/contact-us'
                       style={{
-                        backgroundColor: '#FF4693',
+                        backgroundColor: '#01ACEB',
                         display: 'flex',
                         justifyContent: 'left',
                         marginLeft: '220px',
                         color: 'white',
-                        borderColor: '#FF4693',
+                        borderColor: '#01ACEB',
                         fontSize: 18,
                         //   padding: ' 25px 25px 25px 25px ',
                         //   width: '200px',
@@ -741,7 +762,7 @@ function ServicesShopping({ setThemes, darkMode }) {
           {/* First Section */}
           <div
             style={{
-              backgroundImage: `url(${servicesSoppingBg})`,
+              backgroundImage: `url(${servicesMedicalBg})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               height: '500px',
@@ -776,14 +797,14 @@ function ServicesShopping({ setThemes, darkMode }) {
               <Button
                 style={{
                   backgroundColor: 'transparent',
-                  borderColor: '#FF4693',
+                  borderColor: '#01ACEB',
                   marginRight: '20px',
                 }}
                 size='middle'>
                 Check the Demo Version
               </Button>
               <Button
-                style={{ backgroundColor: '#FF4693', color: 'white' }}
+                style={{ backgroundColor: '#01ACEB', color: 'white' }}
                 size='middle'>
                 Register Now
               </Button>
@@ -794,6 +815,19 @@ function ServicesShopping({ setThemes, darkMode }) {
             style={{
               marginBottom: '100px',
             }}>
+            <Row
+              justify={'center'}
+              style={{
+                marginBottom: '30px',
+              }}>
+              <Typography.Title
+                style={{
+                  color: '#01ACEB',
+                }}
+                level={4}>
+                Free Professional Services
+              </Typography.Title>
+            </Row>
             <Row justify={'center'}>
               <Card
                 style={{
@@ -1022,11 +1056,11 @@ function ServicesShopping({ setThemes, darkMode }) {
             </Row>
             <Row justify={'center'}>
               <img
-                src={service1}
+                src={service3}
                 style={{
                   width: ' 400px',
                 }}
-                alt='service1'
+                alt='service3'
               />
             </Row>
           </div>
@@ -1036,7 +1070,7 @@ function ServicesShopping({ setThemes, darkMode }) {
               <Col span={22}>
                 <Text
                   style={{
-                    color: '#FF4693',
+                    color: '#01ACEB',
                     textAlign: 'left',
                     fontWeight: 'bold',
                     fontSize: 17,
@@ -1088,7 +1122,7 @@ function ServicesShopping({ setThemes, darkMode }) {
           {/* First Section */}
           <div
             style={{
-              backgroundImage: `url(${servicesSoppingBg})`,
+              backgroundImage: `url(${servicesMedicalBg})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               height: '1050px',
@@ -1129,14 +1163,14 @@ function ServicesShopping({ setThemes, darkMode }) {
                   <Button
                     style={{
                       backgroundColor: 'transparent',
-                      borderColor: '#FF4693',
+                      borderColor: '#01ACEB',
                       marginRight: '20px',
                     }}
                     size='large'>
                     Check the Demo Version
                   </Button>
                   <Button
-                    style={{ backgroundColor: '#FF4693', color: 'white' }}
+                    style={{ backgroundColor: '#01ACEB', color: 'white' }}
                     size='large'>
                     Register Now
                   </Button>
@@ -1146,6 +1180,15 @@ function ServicesShopping({ setThemes, darkMode }) {
           </div>
           {/* Second Section  */}
           <div style={{ marginTop: '150px' }}>
+            <Row style={{ marginBottom: '50px' }} justify='center'>
+              <Typography.Title
+                level={1}
+                style={{
+                  color: '#01ACEB',
+                }}>
+                Free Professional Services
+              </Typography.Title>
+            </Row>
             <Row justify={'center'}>
               <Col style={{ marginRight: '30px' }}>
                 <Row justify={'center'}>
@@ -1366,13 +1409,13 @@ function ServicesShopping({ setThemes, darkMode }) {
                     scrambled it to make a type specimen book.
                   </Paragraph>
                 </Row>
-                <Row>
+                <Row justify={'end'}>
                   <img
-                    src={service1}
+                    src={service3}
                     style={{
-                      width: ' 1139px',
+                      width: ' 800px',
                     }}
-                    alt='service1'
+                    alt='service3'
                   />
                 </Row>
               </Col>
@@ -1386,7 +1429,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 <Row justify={'center'}>
                   <Text
                     style={{
-                      color: '#FF4693',
+                      color: '#01ACEB',
                       textAlign: 'left',
                       fontWeight: 'bold',
                       fontSize: 50,
@@ -1426,12 +1469,12 @@ function ServicesShopping({ setThemes, darkMode }) {
                     size='large'
                     href='/contact-us'
                     style={{
-                      backgroundColor: '#FF4693',
+                      backgroundColor: '#01ACEB',
                       display: 'flex',
                       justifyContent: 'left',
                       marginLeft: '220px',
                       color: 'white',
-                      borderColor: '#FF4693',
+                      borderColor: '#01ACEB',
                       fontSize: 18,
                       //   padding: ' 25px 25px 25px 25px ',
                       //   width: '200px',
@@ -1448,4 +1491,4 @@ function ServicesShopping({ setThemes, darkMode }) {
   );
 }
 
-export default ServicesShopping;
+export default ServicesMedical;

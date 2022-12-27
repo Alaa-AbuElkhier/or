@@ -7,8 +7,9 @@ import home3 from '../../assets/home3.png';
 const { Option } = Select;
 const { Paragraph } = Typography;
 
-function AboutUs({ darkMode }) {
+function AboutUs({ darkMode, setThemes }) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  setThemes('dark');
   if (darkMode) {
     return (
       <>

@@ -19,13 +19,14 @@ import PricingPlan from './pages/PricingPage/PricingPlan';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState();
   const [logoTheme, setLogoTheme] = useState('light');
-  const [themes, setThemes] = useState('light');
+  const [themes, setThemes] = useState('');
 
   //Switch theme function
   const switchTheme = (darkMode) => {
     setDarkMode(darkMode);
+    console.log(darkMode);
     if (darkMode) {
       setThemes('dark');
     } else {
@@ -156,7 +157,7 @@ function App() {
           algorithm: theme.defaultAlgorithm,
           token: {
             colorLinkHover: '#fff',
-            // colorPrimary: '#00b96b',
+            colorPrimary: '#52a9db',
             // colorBgMask: '#000',
             // fontSize: 24,
           },

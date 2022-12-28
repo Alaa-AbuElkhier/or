@@ -116,7 +116,19 @@ code {
     overflow: hidden!important;
   }
   
-:where(.css-dev-only-do-not-override-92hl6j).ant-layout .ant-layout-header {
+/* :where(.css-dev-only-do-not-override-92hl6j).ant-layout .ant-layout-header {
+  position:absolute;
+  background-color: transparent;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  border: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+} */
+
+.ant-layout .ant-layout-header {
   position:absolute;
   background-color: transparent;
   right: 0;
@@ -128,8 +140,7 @@ code {
   transition: all .5s ease;
 }
 
-
-:where(.css-dev-only-do-not-override-26rdvq).ant-menu-dark {
+.ant-menu-dark {
   color: rgb(255, 255, 255);
   background-color: transparent;
 }
@@ -153,10 +164,10 @@ code {
   -webkit-transform: rotate(188deg);}
 
 
-  :where(.css-dev-only-do-not-override-92hl6j).ant-menu-light .ant-menu-item a:hover {
+  .ant-menu-light .ant-menu-item a:hover {
     color: #978D8D;
 }
-:where(.css-dev-only-do-not-override-92hl6j).ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+.ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
   color: #978D8D;
 }
 /* .slide-curve{

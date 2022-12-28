@@ -186,6 +186,7 @@ function ServicesweProvide({ darkMode }) {
                     <Typography.Title
                       style={{
                         textAlign: 'left',
+                        color: 'white',
                       }}
                       level={3}>
                       Shopping & Retail
@@ -194,6 +195,7 @@ function ServicesweProvide({ darkMode }) {
                       style={{
                         fontSize: 20,
                         textAlign: 'left',
+                        color: '#adadad',
                       }}>
                       Orderitto helps you sell your merchandise to
                       <br /> your customers Online by providing a unique
@@ -203,7 +205,11 @@ function ServicesweProvide({ darkMode }) {
                     <Row>
                       {' '}
                       <Button
-                        style={{ background: 'white', color: 'black' }}
+                        style={{
+                          background: 'white',
+                          color: 'black',
+                          width: '185px',
+                        }}
                         size='large'
                         type='primary'>
                         Start Now
@@ -229,6 +235,7 @@ function ServicesweProvide({ darkMode }) {
                     <Typography.Title
                       style={{
                         textAlign: 'left',
+                        color: 'white',
                       }}
                       level={3}>
                       Medical Stores
@@ -237,6 +244,7 @@ function ServicesweProvide({ darkMode }) {
                       style={{
                         fontSize: 20,
                         textAlign: 'left',
+                        color: '#adadad',
                       }}>
                       Orderitto helps authorized pharmacies sell
                       <br /> prescribtions Online by providing a website and
@@ -248,7 +256,11 @@ function ServicesweProvide({ darkMode }) {
                       <Button
                         size='large'
                         type='primary'
-                        style={{ background: 'white', color: 'black' }}>
+                        style={{
+                          background: 'white',
+                          color: 'black',
+                          width: '185px',
+                        }}>
                         Start Now
                       </Button>
                     </Row>
@@ -486,7 +498,12 @@ function ServicesweProvide({ darkMode }) {
                   </Paragraph>{' '}
                   <Row>
                     {' '}
-                    <Button size='large' type='primary'>
+                    <Button
+                      size='large'
+                      type='primary'
+                      style={{
+                        width: '185px',
+                      }}>
                       Start Now
                     </Button>
                   </Row>
@@ -527,7 +544,12 @@ function ServicesweProvide({ darkMode }) {
                     24/7 technical support.
                   </Paragraph>
                   <Row>
-                    <Button size='large' type='primary'>
+                    <Button
+                      size='large'
+                      type='primary'
+                      style={{
+                        width: '185px',
+                      }}>
                       Start Now
                     </Button>
                   </Row>
@@ -560,31 +582,42 @@ function ServicesweProvide({ darkMode }) {
               }}>
               <Row justify={'center'}>
                 {' '}
-                <Col span={3}>
+                <Col align={'middle'}>
                   {' '}
                   <img
                     src={logo}
                     style={{
                       width: '150px',
-                      marginTop: '-16px',
-                      marginLeft: '48px',
+                      marginTop: '29px',
+                      paddingRight: '10px',
                     }}
                     alt='logo'
                   />
                 </Col>
-                <Col>
+                <Col align={'middle'}>
                   {' '}
                   <Typography.Title
                     level={2}
                     style={{
                       color: 'white',
+                      textAlign: 'left',
                     }}>
-                    is the fastest & easiest way to build the best online <br />{' '}
-                    store in the MENA region
+                    is the fastest & easiest way to build the best <br /> online
+                    store in the MENA region{' '}
                   </Typography.Title>
                 </Col>
+              </Row>
+              <Row justify={'center'}>
+                {' '}
                 <Col align={'middle'}>
-                  <Button type='primary'>START NOW</Button>
+                  <Button
+                    type='primary'
+                    style={{
+                      width: '185px',
+                      fontWeight: 700,
+                    }}>
+                    START NOW
+                  </Button>
                 </Col>
               </Row>
             </div>

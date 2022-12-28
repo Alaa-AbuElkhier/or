@@ -184,6 +184,7 @@ function HomeSlider({ darkMode }) {
                               backgroundColor: '#63A3DC',
                               color: 'white',
                               borderColor: '#63A3DC',
+                              width: '185px',
                             }}>
                             START NOW
                           </Button>
@@ -347,10 +348,18 @@ function HomeSlider({ darkMode }) {
                           style={{
                             backgroundColor: 'transparent',
                             color: 'white',
+                            fontWeight: 700,
                           }}>
                           LERN MORE ABOUT ORDERITTO
                         </Button>
-                        <Button size='large'>START NOW</Button>
+                        <Button
+                          size='large'
+                          style={{
+                            width: '185px',
+                            fontWeight: 700,
+                          }}>
+                          START NOW
+                        </Button>
                       </Space>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12} align='middle'>

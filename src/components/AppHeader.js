@@ -150,7 +150,6 @@ function AppHeader({
             <div className='nav-menu'>
               {darkMode ? (
                 <Menu
-                  theme='dark'
                   style={{
                     backgroundColor: 'transparent',
                     color: '#978D8D',

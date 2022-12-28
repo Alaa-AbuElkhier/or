@@ -21,7 +21,7 @@ const { Header, Footer, Sider, Content } = Layout;
 function App() {
   const [darkMode, setDarkMode] = useState();
   const [logoTheme, setLogoTheme] = useState('light');
-  const [themes, setThemes] = useState('');
+  const [themes, setThemes] = useState('light');
 
   //Switch theme function
   const switchTheme = (darkMode) => {

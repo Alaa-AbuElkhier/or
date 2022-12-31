@@ -1136,13 +1136,13 @@ function OurPricingPlans({ darkMode }) {
             </Paragraph>
           </Row>
           <Row justify={'center'}>
-            <Col span={6}>
+            <Col span={8}>
               {/* First Card 100$ */}
               <Row justify={'center'}>
                 {' '}
                 <div
                   style={{
-                    marginTop: '300px',
+                    marginTop: '250px',
                     background: '#F3F3F3',
                     width: '392px',
                     height: '600px',
@@ -1255,14 +1255,15 @@ function OurPricingPlans({ darkMode }) {
                 </div>
               </Row>
             </Col>
-            <Col span={6}>
+            <Col span={8}>
               {' '}
               {/* Second Card  120$*/}
               <Row justify={'center'}>
                 {' '}
                 <div
+                  className='pricing-card'
                   style={{
-                    marginTop: '200px',
+                    marginTop: '100px',
                     background: 'white',
                     width: '392px',
                     height: '600px',
@@ -1392,14 +1393,14 @@ function OurPricingPlans({ darkMode }) {
               </Row>
             </Col>
 
-            <Col span={6}>
+            <Col span={8}>
               {' '}
               {/* Third Card  150$*/}
               <Row justify={'center'}>
                 {' '}
                 <div
                   style={{
-                    marginTop: '300px',
+                    marginTop: '250px',
                     background: '#F3F3F3',
                     width: '392px',
                     height: '600px',

@@ -87,7 +87,7 @@ function GetYourBusinessApp({ darkMode }) {
               }}
               justify={'start'}>
               <Col span={12} push={1}>
-                <img src={mobileModelDark} alt='home7' />
+                <img src={mobileModelDark} alt='' style={{ width: '70%' }} />
               </Col>
               <Col span={12}>
                 <Typography.Title
@@ -114,12 +114,12 @@ function GetYourBusinessApp({ darkMode }) {
                   </Paragraph>
                 </Row>
                 <Row style={{ marginBottom: '30px' }}>
-                  <Col span={4}>
+                  <Col span={5}>
                     <a>
                       <img src={appleStoreDark} alt='appleStore' />
                     </a>
                   </Col>
-                  <Col span={4}>
+                  <Col span={5}>
                     <a>
                       {' '}
                       <img src={googlePlayDark} alt='googlePlay' />
@@ -253,7 +253,7 @@ function GetYourBusinessApp({ darkMode }) {
             }}
             justify={'start'}>
             <Col span={12} push={1}>
-              <img src={home7} alt='home7' />
+              <img src={home7} alt='' style={{ width: '70%' }} />
             </Col>
             <Col span={12}>
               <Typography.Title
@@ -280,21 +280,21 @@ function GetYourBusinessApp({ darkMode }) {
                 </Paragraph>
               </Row>
               <Row>
-                <Col span={4}>
+                <Col span={5}>
                   <a>
-                    <img src={appleStore} alt='appleStore' />
+                    <img src={appleStore} alt='' />
                   </a>
                 </Col>
-                <Col span={4}>
+                <Col span={5}>
                   <a>
                     {' '}
-                    <img src={googlePlay} alt='googlePlay' />
+                    <img src={googlePlay} alt='' />
                   </a>
                 </Col>
               </Row>
               <Row>
                 {/* frist card */}
-                <Col span={4} style={{ marginRight: '10px' }}>
+                <Col span={5} style={{ marginRight: '10px' }}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Row justify={'center'}>
                       <img src={downloadIcon} alt='home7' />
@@ -310,7 +310,7 @@ function GetYourBusinessApp({ darkMode }) {
                   </Card>
                 </Col>
                 {/* second card */}
-                <Col span={4} style={{ marginRight: '10px' }}>
+                <Col span={5} style={{ marginRight: '10px' }}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Row justify={'center'}>
                       <img src={happyIcon2} alt='happyIcon' />
@@ -326,7 +326,7 @@ function GetYourBusinessApp({ darkMode }) {
                   </Card>
                 </Col>
                 {/* third card */}
-                <Col span={4}>
+                <Col span={5}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Row justify={'center'}>
                       <img src={starIcon} alt='starIcon' />

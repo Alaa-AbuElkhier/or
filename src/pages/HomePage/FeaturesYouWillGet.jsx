@@ -116,13 +116,13 @@ function FeaturesYouWillGet({ darkMode }) {
               <Typography.Title
                 level={2}
                 style={{
-                  color: 'black',
+                  color: 'white',
                 }}>
                 Features You Will Get
               </Typography.Title>
             </Row>
             <div className='container'>
-              {items.map((item) => (
+              {darkItems.map((item) => (
                 <>
                   {' '}
                   <Row
@@ -135,8 +135,8 @@ function FeaturesYouWillGet({ darkMode }) {
                         bordered={false}
                         style={{
                           width: 350,
-                          background: '#E3E3E3',
-                          color: 'black',
+                          background: '#313131',
+                          color: '#AEAEAE',
                           borderRadius: '20px',
                         }}>
                         <Row align={'middle'}>
@@ -147,7 +147,7 @@ function FeaturesYouWillGet({ darkMode }) {
                           <Col>
                             {' '}
                             <Text
-                              style={{ color: 'black', fontWeight: 'bold' }}>
+                              style={{ color: 'white', fontWeight: 'bold' }}>
                               {item.title}
                             </Text>
                           </Col>
@@ -159,7 +159,8 @@ function FeaturesYouWillGet({ darkMode }) {
                           <Button
                             style={{
                               backgroundColor: 'transparent',
-                              borderColor: 'black',
+                              borderColor: 'white',
+                              color: 'white',
                             }}>
                             READ MORE
                           </Button>

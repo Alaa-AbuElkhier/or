@@ -43,7 +43,7 @@ function ServicesweProvide({ darkMode }) {
                 <Typography.Title
                   level={2}
                   style={{
-                    color: 'black',
+                    color: 'white',
                   }}>
                   Services we Provide
                 </Typography.Title>
@@ -51,7 +51,8 @@ function ServicesweProvide({ darkMode }) {
               <Row justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
+                    borderColor: '#313131',
                     width: '90%',
                   }}>
                   <Row justify={'center'}>
@@ -67,6 +68,7 @@ function ServicesweProvide({ darkMode }) {
                     <Typography.Title
                       style={{
                         textAlign: 'left',
+                        color: 'white',
                       }}
                       level={3}>
                       Shopping & Retail
@@ -76,7 +78,7 @@ function ServicesweProvide({ darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 20,
                         textAlign: 'left',
                       }}>
@@ -99,7 +101,8 @@ function ServicesweProvide({ darkMode }) {
               <Row justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
+                    borderColor: '#313131',
                     width: '90%',
                   }}>
                   <Row justify={'center'}>
@@ -115,6 +118,7 @@ function ServicesweProvide({ darkMode }) {
                     <Typography.Title
                       style={{
                         textAlign: 'left',
+                        color: 'white',
                       }}
                       level={3}>
                       Medical Stores
@@ -124,7 +128,7 @@ function ServicesweProvide({ darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 20,
                         textAlign: 'left',
                       }}>

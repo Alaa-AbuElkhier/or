@@ -27,7 +27,7 @@ function LifetimeUpdates({ darkMode }) {
         {isTabletOrMobile ? (
           <div
             style={{
-              backgroundColor: 'white',
+              backgroundColor: '#303030',
               paddingTop: '40px',
             }}>
             <Row
@@ -38,7 +38,7 @@ function LifetimeUpdates({ darkMode }) {
               <Typography.Title
                 level={2}
                 style={{
-                  color: 'black',
+                  color: 'white',
                 }}>
                 Lifetime Updates
               </Typography.Title>
@@ -56,7 +56,7 @@ function LifetimeUpdates({ darkMode }) {
             <Row justify={'center'}>
               <Paragraph
                 style={{
-                  color: '#5A7184',
+                  color: '#AEAEAE',
                   fontSize: 20,
                   marginTop: '20px',
                 }}>
@@ -117,7 +117,7 @@ function LifetimeUpdates({ darkMode }) {
                 </Button>
               </Col>
               <Col span={12}>
-                <img src={home6} alt='home6' />
+                <img src={home6} alt='' style={{ width: '90%' }} />
               </Col>
             </Row>
           </div>
@@ -213,7 +213,7 @@ function LifetimeUpdates({ darkMode }) {
               </Button>
             </Col>
             <Col span={12}>
-              <img src={home6} alt='home6' />
+              <img src={home6} alt='' style={{ width: '90%' }} />
             </Col>
           </Row>
         </div>

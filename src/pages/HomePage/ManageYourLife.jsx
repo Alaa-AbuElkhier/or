@@ -26,7 +26,7 @@ function ManageYourLife({ darkMode }) {
         {isTabletOrMobile ? (
           <div
             style={{
-              background: 'black',
+              background: '#303030',
               backgroundImage: `url(${manageBgRes})`,
             }}>
             <Row justify={'center'}>

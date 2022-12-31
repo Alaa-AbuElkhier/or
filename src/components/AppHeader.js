@@ -174,7 +174,7 @@ function AppHeader({
               )}{' '}
             </div>
           </Col>{' '}
-          <Col xs={0} sm={0} md={0} lg={2} xl={3}>
+          <Col xs={1} sm={1} md={2} lg={2} xl={3}>
             <Switch
               checkedChildren='Dark'
               unCheckedChildren='Light'

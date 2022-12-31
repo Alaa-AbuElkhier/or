@@ -475,6 +475,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                           style={{
                             textAlign: 'left',
                             fontWeight: 'bold',
+                            color: 'white',
                           }}
                           level={4}>
                           Personalized Services
@@ -484,7 +485,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white ',
+                            color: '#AEAEAE ',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -510,6 +511,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                           style={{
                             textAlign: 'left',
                             fontWeight: 'bold',
+                            color: 'white',
                           }}
                           level={4}>
                           Personalized Services
@@ -519,7 +521,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white',
+                            color: '#AEAEAE',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -542,6 +544,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                           style={{
                             textAlign: 'left',
                             fontWeight: 'bold',
+                            color: 'white',
                           }}
                           level={4}>
                           Free Website
@@ -551,7 +554,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white',
+                            color: '#AEAEAE',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -577,6 +580,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                           style={{
                             textAlign: 'left',
                             fontWeight: 'bold',
+                            color: 'white',
                           }}
                           level={4}>
                           Professional Team
@@ -586,7 +590,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white',
+                            color: '#AEAEAE',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -609,6 +613,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                           style={{
                             textAlign: 'left',
                             fontWeight: 'bold',
+                            color: 'white',
                           }}
                           level={4}>
                           Expertise
@@ -618,7 +623,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         {' '}
                         <Paragraph
                           style={{
-                            color: 'white',
+                            color: '#AEAEAE',
                             fontSize: 16,
                             textAlign: 'left',
                           }}>
@@ -736,7 +741,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                         backgroundColor: '#01ACEB',
                         display: 'flex',
                         justifyContent: 'left',
-                        marginLeft: '220px',
+
                         color: 'white',
                         borderColor: '#01ACEB',
                         fontSize: 18,

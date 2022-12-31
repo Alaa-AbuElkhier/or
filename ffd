@@ -1,90 +1,105 @@
 <Row
-        style={{
-          paddingTop: '100px',
-        }}
-        justify={'center'}>
-        <Col span={12} push={2}>
-          <img src={home7} alt='home7' />
-        </Col>
-        <Col span={12}>
-          {' '}
-        
-         
-        
-        
-        </Col>
-      </Row>
+  style={{
+    paddingTop: '100px',
+  }}
+  justify={'center'}>
+  <Col span={12} push={2}>
+    <img src={home7} alt='home7' />
+  </Col>
+  <Col span={12}> </Col>
+</Row>;
 
+{
+  darkMode ? (
+    <a href='/' rel='noopener noreferrer'>
+      <img src={darkLogo} alt='Logo' />
+    </a>
+  ) : (
+    <a href='/' rel='noopener noreferrer'>
+      <img src={logo} alt='Logo' />
+    </a>
+  );
+}
 
+const setThemeInStorage = (theme) => {
+  localStorage.setItem('theme', theme);
+};
+setThemeInStorage('light');
+const getThemeInStorage = () => {
+  localStorage.getItem('theme'); // returns 'light' in this case
+};
+const theme = getThemeInStorage();
 
-      {darkMode ? (
-        <a href='/' rel='noopener noreferrer'>
-          <img src={darkLogo} alt='Logo' />
-        </a>
-      ) : (
-        <a href='/' rel='noopener noreferrer'>
-          <img src={logo} alt='Logo' />
-        </a>
-      )}
+{
+  darkMode ? (
+    <a href='/' rel='noopener noreferrer'>
+      <img src={darkLogo} alt='Logo' />
+    </a>
+  ) : (
+    <a href='/' rel='noopener noreferrer'>
+      <img src={logo} alt='Logo' />
+    </a>
+  );
+}
 
+useEffect(() => {
+  if (darkMode) {
+    console.log(darkMode);
+    setThemes('dark');
+  } else {
+    console.log(darkMode);
+    setThemes('light');
+  }
+}, [darkMode]);
+console.log(themes);
 
+// save theme value in local storage
+const setThemeInStorage = (theme) => {
+  localStorage.setItem('theme', theme);
+};
+setThemeInStorage(darkMode);
+const getThemeInStorage = () => {
+  return localStorage.getItem('theme'); // returns 'light' in this case
+};
+const theme = getThemeInStorage();
+// const [theme, setTheme] = useState('');
 
+// const onChange = () => {
+//   setDarkMode(!darkMode);
+//   if (!darkMode) {
+//     setThemeInStorage('dark');
+//   } else {
+//     setThemeInStorage('light');
+//   }
+// };
 
+//save value on local storage
 
-      const setThemeInStorage = (theme) => {
-        localStorage.setItem('theme', theme)
-     }
-     setThemeInStorage('light')
-     const getThemeInStorage = () => {
-        localStorage.getItem('theme') // returns 'light' in this case
-     }
-     const theme = getThemeInStorage()
+const setThemeInStorage = (theme) => {
+  localStorage.setItem('theme', theme);
+};
+setThemeInStorage(themes);
+const getThemeInStorage = () => {
+  return localStorage.getItem('theme'); // returns 'light' in this case
+};
+const theme = getThemeInStorage();
+console.log(darkMode, '4');
 
+const history = createBrowserHistory();
+import qs from 'qs';
+import { createBrowserHistory } from 'history';
 
-      {darkMode ? (
-            <a href='/' rel='noopener noreferrer'>
-              <img src={darkLogo} alt='Logo' />
-            </a>
-          ) : (
-            <a href='/' rel='noopener noreferrer'>
-              <img src={logo} alt='Logo' />
-            </a>
-          )}
-
-
-
-
-
-
-
-
-            useEffect(() => {
-    if (darkMode) {
-      console.log(darkMode);
-      setThemes('dark');
-    } else {
-      console.log(darkMode);
-      setThemes('light');
-    }
-  }, [darkMode]);
-  console.log(themes);
-
-  // save theme value in local storage
-  const setThemeInStorage = (theme) => {
-    localStorage.setItem('theme', theme);
-  };
-  setThemeInStorage(darkMode);
-  const getThemeInStorage = () => {
-    return localStorage.getItem('theme'); // returns 'light' in this case
-  };
-  const theme = getThemeInStorage();
-  // const [theme, setTheme] = useState('');
-
-  // const onChange = () => {
-  //   setDarkMode(!darkMode);
-  //   if (!darkMode) {
-  //     setThemeInStorage('dark');
-  //   } else {
-  //     setThemeInStorage('light');
-  //   }
-  // };
+useEffect(() => {
+  const filterParams = history.location.search.substr(1);
+  const filtersFromParams = qs.parse(filterParams);
+  if (filtersFromParams.darkMode) {
+    console.log(darkMode, 'before set');
+    setDarkMode(Boolean(filtersFromParams.darkMode));
+    console.log(darkMode, 'after set');
+  }
+}, []);
+console.log(darkMode, 'change');
+useEffect(() => {
+  history.push(`?darkMode=${darkMode}`);
+}, [darkMode]);
+console.log(darkMode, 'before ifr set');

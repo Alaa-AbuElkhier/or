@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import logo from './logo.svg';
 import './App.css';
 import footerbg from './assets/footerbg.png';
@@ -16,23 +15,31 @@ import ServicesShopping from './pages/ServicesShopping/ServicesShopping';
 import ServicesMedical from './pages/ServicesMedical/ServicesMedical';
 import PricingPage from './pages/PricingPage/PricingPage';
 import PricingPlan from './pages/PricingPage/PricingPlan';
+import AppContent from './AppContent';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
-  const [darkMode, setDarkMode] = useState();
+  const [darkMode, setDarkMode] = React.useState(
+    localStorage.getItem('darkMode')
+  );
   const [logoTheme, setLogoTheme] = useState('light');
-  const [themes, setThemes] = useState('light');
-
+  const [themes, setThemes] = React.useState(localStorage.getItem('theme'));
+  console.log(themes);
+  const test = typeof themes;
+  console.log(test, 'test');
   //Switch theme function
   const switchTheme = (darkMode) => {
+    console.log(darkMode, 'be');
     setDarkMode(darkMode);
-    console.log(darkMode);
+    localStorage.setItem('darkMode', darkMode);
+    console.log(darkMode, 'af');
     if (darkMode) {
       setThemes('dark');
     } else {
       setThemes('light');
     }
   };
+
   //save value on local storage
 
   const setThemeInStorage = (theme) => {
@@ -43,8 +50,11 @@ function App() {
     return localStorage.getItem('theme'); // returns 'light' in this case
   };
   const theme = getThemeInStorage();
-  console.log(theme);
-  if (theme === 'dark') {
+  // setThemes(localStorage.getItem('theme'));
+  console.log(theme, 'dsf');
+
+  if (darkMode) {
+    console.log(theme, 'is');
     return (
       <div className='App'>
         <ConfigProvider
@@ -83,58 +93,11 @@ function App() {
               />
             </Header>
             <Content>
-              <Routes>
-                <Route path='/' element={<HomePage darkMode={darkMode} />} />
-                <Route
-                  path='/about-us'
-                  element={
-                    <AboutUs darkMode={darkMode} setThemes={setThemes} />
-                  }
-                />
-                <Route
-                  path='/contact-us'
-                  element={
-                    <ContactUs darkMode={darkMode} setThemes={setThemes} />
-                  }
-                />
-                <Route
-                  path='/faq'
-                  element={
-                    <FaqPage darkMode={darkMode} setThemes={setThemes} />
-                  }
-                />
-
-                <Route
-                  path='/services-shopping'
-                  element={
-                    <ServicesShopping
-                      setThemes={setThemes}
-                      darkMode={darkMode}
-                    />
-                  }
-                />
-                <Route
-                  path='/services-medical'
-                  element={
-                    <ServicesMedical
-                      setThemes={setThemes}
-                      darkMode={darkMode}
-                    />
-                  }
-                />
-                <Route
-                  path='/pricing'
-                  element={
-                    <PricingPage setThemes={setThemes} darkMode={darkMode} />
-                  }
-                />
-                <Route
-                  path='/pricing-plan'
-                  element={
-                    <PricingPlan setThemes={setThemes} darkMode={darkMode} />
-                  }
-                />
-              </Routes>
+              <AppContent
+                darkMode={darkMode}
+                setThemes={setThemes}
+                theme={theme}
+              />
             </Content>
 
             <Footer
@@ -175,42 +138,7 @@ function App() {
             />
           </Header>
           <Content>
-            <Routes>
-              <Route path='/' element={<HomePage darkMode={darkMode} />} />
-              <Route
-                path='/about-us'
-                element={<AboutUs setThemes={setThemes} />}
-              />
-              <Route
-                path='/contact-us'
-                element={<ContactUs setThemes={setThemes} />}
-              />
-              <Route path='/faq' element={<FaqPage setThemes={setThemes} />} />
-              <Route
-                path='/services-shopping'
-                element={
-                  <ServicesShopping setThemes={setThemes} darkMode={darkMode} />
-                }
-              />
-              <Route
-                path='/services-medical'
-                element={
-                  <ServicesMedical setThemes={setThemes} darkMode={darkMode} />
-                }
-              />
-              <Route
-                path='/pricing'
-                element={
-                  <PricingPage setThemes={setThemes} darkMode={darkMode} />
-                }
-              />
-              <Route
-                path='/pricing-plan'
-                element={
-                  <PricingPlan setThemes={setThemes} darkMode={darkMode} />
-                }
-              />
-            </Routes>
+            <AppContent darkMode={darkMode} setThemes={setThemes} />
           </Content>
           <Footer
             style={{

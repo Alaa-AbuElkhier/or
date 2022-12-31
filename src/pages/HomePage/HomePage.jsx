@@ -22,7 +22,7 @@ import AboutUs from '../AboutUsPage/AboutUs';
 const { Header, Footer, Sider, Content } = Layout;
 const { Paragraph } = Typography;
 
-function HomePage({ darkMode }) {
+function HomePage({ darkMode, theme }) {
   return (
     <div>
       <Layout>
@@ -30,15 +30,15 @@ function HomePage({ darkMode }) {
           <AppHeader></AppHeader>
         </Header> */}
         <Content>
-          <HomeSlider darkMode={darkMode} />
-          <HowItWork darkMode={darkMode} />
-          <ManageYourLife darkMode={darkMode} />
-          <ServicesweProvide darkMode={darkMode} />
-          <FeaturesYouWillGet darkMode={darkMode} />
-          <LifetimeUpdates darkMode={darkMode} />
-          <ClientsTestimonials darkMode={darkMode} />
-          <OurPricingPlans darkMode={darkMode} />
-          <GetYourBusinessApp darkMode={darkMode} />
+          <HomeSlider darkMode={darkMode} theme={theme} />
+          <HowItWork darkMode={darkMode} theme={theme} />
+          <ManageYourLife darkMode={darkMode} theme={theme} />
+          <ServicesweProvide darkMode={darkMode} theme={theme} />
+          <FeaturesYouWillGet darkMode={darkMode} theme={theme} />
+          <LifetimeUpdates darkMode={darkMode} theme={theme} />
+          <ClientsTestimonials darkMode={darkMode} theme={theme} />
+          <OurPricingPlans darkMode={darkMode} theme={theme} />
+          <GetYourBusinessApp darkMode={darkMode} theme={theme} />
         </Content>
         {/* <Footer
           style={{

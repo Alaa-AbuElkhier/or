@@ -25,7 +25,7 @@ function HowItWork({ darkMode }) {
               <Typography.Title
                 level={1}
                 style={{
-                  color: 'black',
+                  color: 'white',
                 }}>
                 How it Works?
               </Typography.Title>
@@ -51,7 +51,7 @@ function HowItWork({ darkMode }) {
               }}>
               <Paragraph
                 style={{
-                  color: 'black',
+                  color: 'white',
 
                   textAlign: 'left',
                   display: 'flex',

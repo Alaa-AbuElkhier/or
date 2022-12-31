@@ -26,7 +26,7 @@ import home3 from '../../assets/home3.png';
 const { Header, Content, Footer } = Layout;
 const { Paragraph, Text } = Typography;
 
-function HomeSlider({ darkMode }) {
+function HomeSlider({ darkMode, theme }) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   if (darkMode) {
     return (
@@ -37,7 +37,7 @@ function HomeSlider({ darkMode }) {
               <div>
                 <Row
                   style={{
-                    background: 'black',
+                    background: '#f3f3f3',
                     paddingTop: '150px',
                     borderBottomLeftRadius: '40%',
                   }}>
@@ -48,7 +48,7 @@ function HomeSlider({ darkMode }) {
                       level={2}
                       style={{
                         margin: 0,
-                        color: 'white',
+                        color: '#4883c1',
                       }}>
                       A platform built for your <br />
                     </Typography.Title>
@@ -60,7 +60,7 @@ function HomeSlider({ darkMode }) {
                         level={2}
                         style={{
                           margin: 0,
-                          color: 'white',
+                          color: '#4883c1',
                         }}>
                         Business
                       </Typography.Title>
@@ -79,7 +79,7 @@ function HomeSlider({ darkMode }) {
                   {' '}
                   <p
                     style={{
-                      color: 'black',
+                      color: 'white',
                       fontSize: 20,
                       textAlign: 'left',
                     }}>
@@ -104,9 +104,9 @@ function HomeSlider({ darkMode }) {
                       size='large'
                       style={{
                         backgroundColor: 'transparent',
-                        color: 'black',
+                        color: '#4883c1',
                         fontSize: 14,
-                        borderColor: 'black',
+                        borderColor: '#4883c1',
                       }}>
                       LERN MORE ABOUT ORDERITTO
                     </Button>

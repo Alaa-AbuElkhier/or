@@ -4,7 +4,7 @@ import './App.css';
 import footerbg from './assets/footerbg.png';
 import { ConfigProvider, Button, theme, Layout, Switch } from 'antd';
 
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Routes, Route, Outlet, Link, json } from 'react-router-dom';
 import AboutUs from './pages/AboutUsPage/AboutUs';
 import HomePage from './pages/HomePage/HomePage';
 import AppHeader from './components/AppHeader';
@@ -20,41 +20,24 @@ const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(
-    localStorage.getItem('darkMode')
+    JSON.parse(localStorage.getItem('darkMode'))
   );
   const [logoTheme, setLogoTheme] = useState('light');
   const [themes, setThemes] = React.useState(localStorage.getItem('theme'));
-  console.log(themes);
-  const test = typeof themes;
-  console.log(test, 'test');
   //Switch theme function
-  const switchTheme = (darkMode) => {
-    console.log(darkMode, 'be');
-    setDarkMode(darkMode);
-    localStorage.setItem('darkMode', darkMode);
-    console.log(darkMode, 'af');
-    if (darkMode) {
+  const switchTheme = (darkModeFlag) => {
+    setDarkMode(darkModeFlag);
+    localStorage.setItem('darkMode', darkModeFlag);
+    if (darkModeFlag) {
+      localStorage.setItem('theme', 'dark');
       setThemes('dark');
     } else {
+      localStorage.setItem('theme', 'light');
       setThemes('light');
     }
   };
 
-  //save value on local storage
-
-  const setThemeInStorage = (theme) => {
-    localStorage.setItem('theme', theme);
-  };
-  setThemeInStorage(themes);
-  const getThemeInStorage = () => {
-    return localStorage.getItem('theme'); // returns 'light' in this case
-  };
-  const theme = getThemeInStorage();
-  // setThemes(localStorage.getItem('theme'));
-  console.log(theme, 'dsf');
-
   if (darkMode) {
-    console.log(theme, 'is');
     return (
       <div className='App'>
         <ConfigProvider

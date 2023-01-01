@@ -88,7 +88,7 @@ function OurPricingPlans({ darkMode }) {
         {isTabletOrMobile ? (
           <div
             style={{
-              background: 'white',
+              background: 'transparent',
               backgroundImage: `url(${pricingBgRes})`,
               paddingBottom: '50px',
             }}>
@@ -96,7 +96,7 @@ function OurPricingPlans({ darkMode }) {
               <Typography.Title
                 level={2}
                 style={{
-                  color: 'black',
+                  color: 'white',
                 }}>
                 Our Pricing Plans
               </Typography.Title>
@@ -104,7 +104,7 @@ function OurPricingPlans({ darkMode }) {
             <Row justify={'center'}>
               <Paragraph
                 style={{
-                  color: 'black',
+                  color: 'white',
                   fontSize: 16,
                   marginBottom: 0,
                 }}>
@@ -116,260 +116,382 @@ function OurPricingPlans({ darkMode }) {
 
             <Carousel className='pricing'>
               <div>
-                <Row
-                  justify={'center'}
-                  style={{ marginTop: '30px', marginBottom: '50px' }}>
-                  <Card hoverable title='100$' style={{ width: 300 }}>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Blog System</Text>
-                      </Col>
+                <Row justify={'center'}>
+                  {' '}
+                  <div
+                    style={{
+                      marginTop: '100px',
+                      background: 'white',
+                      width: '85%',
+                      height: '600px',
+                    }}>
+                    <Row justify={'end'}>
+                      <div
+                        style={{
+                          position: 'absolute',
+                          zIndex: 1,
+                          color: 'white',
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginTop: '30px',
+                          marginRight: '15px',
+                        }}>
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 20,
+                            fontWeight: 600,
+                          }}>
+                          STARTER
+                        </Text>{' '}
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 24,
+                            fontWeight: 700,
+
+                            display: 'block',
+                          }}>
+                          PACKAGE
+                        </Text>{' '}
+                      </div>
+
+                      <img
+                        src={vector4}
+                        alt=''
+                        style={{
+                          position: 'absolute',
+                          width: '320px',
+                        }}
+                      />
+
+                      <Text
+                        style={{
+                          position: 'absolute',
+                          fontSize: 60,
+                          fontWeight: 750,
+                          color: '#63A3DC',
+                          zIndex: 1,
+                          marginRight: '175px',
+                          marginTop: '75px',
+                        }}>
+                        $100
+                      </Text>
                     </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Support System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>POS System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Marketing System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Multiple Payment Options</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Reports</Text>
-                      </Col>
+                    {/* Second Part */}
+                    <Row justify={'center'}>
+                      <div
+                        style={{
+                          paddingBottom: '20px',
+                          marginTop: '200px',
+                        }}>
+                        {priceItems.map((item) => (
+                          <>
+                            <Row
+                              style={{
+                                paddingBottom: '20px',
+                                //   marginTop: '200px',
+                              }}>
+                              <Col>
+                                {' '}
+                                <img
+                                  src={item.icon}
+                                  alt=''
+                                  style={{ paddingRight: '10px' }}
+                                />
+                              </Col>
+                              <Col>
+                                <Text
+                                  style={{
+                                    fontSize: 16,
+                                    fontWeight: 650,
+                                    color: 'black',
+                                  }}>
+                                  {item.title}
+                                </Text>
+                              </Col>
+                            </Row>
+                          </>
+                        ))}
+                      </div>
                     </Row>
                     <Row
                       justify={'center'}
                       style={{
                         paddingBottom: '20px',
                       }}>
-                      <Button size='large'>GET STARTED</Button>
+                      <Button
+                        href='/pricing-plan'
+                        style={{
+                          backgroundColor: 'transparent',
+                          color: '#63A3DC',
+                          borderColor: '#63A3DC',
+                          width: '200px',
+                          fontWeight: '650',
+                        }}
+                        size='large'>
+                        GET STARTED
+                      </Button>
                     </Row>
-                  </Card>
+                  </div>
                 </Row>
               </div>
               <div>
-                <Row justify={'center'} style={{ marginTop: '30px' }}>
-                  <Card hoverable title='120$' style={{ width: 300 }}>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Blog System</Text>
-                      </Col>
+                <Row justify={'center'}>
+                  {' '}
+                  <div
+                    style={{
+                      marginTop: '100px',
+                      background: 'white',
+                      width: '85%',
+                      height: '600px',
+                    }}>
+                    <Row justify={'end'}>
+                      <div
+                        style={{
+                          position: 'absolute',
+                          zIndex: 1,
+                          color: 'white',
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginTop: '30px',
+                          marginRight: '15px',
+                        }}>
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 20,
+                            fontWeight: 600,
+                          }}>
+                          BUSINESS
+                        </Text>{' '}
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 24,
+                            fontWeight: 700,
+
+                            display: 'block',
+                          }}>
+                          PACKAGE
+                        </Text>{' '}
+                      </div>
+
+                      <img
+                        src={Vector}
+                        alt=''
+                        style={{
+                          position: 'absolute',
+                        }}
+                      />
+
+                      <Text
+                        style={{
+                          position: 'absolute',
+                          fontSize: 60,
+                          fontWeight: 750,
+                          color: '#63A3DC',
+                          zIndex: 1,
+                          marginRight: '172px',
+                          marginTop: '75px',
+                        }}>
+                        $120
+                      </Text>
                     </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Support System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>POS System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Marketing System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Multiple Payment Options</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Reports</Text>
-                      </Col>
+                    {/* Second Part */}
+                    <Row justify={'center'}>
+                      <div
+                        style={{
+                          paddingBottom: '20px',
+                          marginTop: '200px',
+                        }}>
+                        {items.map((item) => (
+                          <>
+                            <Row
+                              style={{
+                                paddingBottom: '20px',
+                                //   marginTop: '200px',
+                              }}>
+                              <Col>
+                                {' '}
+                                <img
+                                  src={item.icon}
+                                  alt=''
+                                  style={{ paddingRight: '10px' }}
+                                />
+                              </Col>
+                              <Col>
+                                <Text
+                                  style={{
+                                    fontSize: 16,
+                                    fontWeight: 650,
+                                    color: 'black',
+                                  }}>
+                                  {item.title}
+                                </Text>
+                              </Col>
+                            </Row>
+                          </>
+                        ))}
+                      </div>
+                      <img
+                        src={vector2}
+                        alt=''
+                        style={{
+                          position: 'absolute',
+                          marginRight: '255px',
+                          marginTop: '466px',
+                        }}
+                      />
+                      <img
+                        src={vector3}
+                        alt=''
+                        style={{
+                          position: 'absolute',
+                          marginLeft: '267px',
+                          marginTop: '434px',
+                        }}
+                      />
                     </Row>
                     <Row
                       justify={'center'}
                       style={{
                         paddingBottom: '20px',
                       }}>
-                      <Button size='large'>GET STARTED</Button>
+                      <Button
+                        style={{
+                          backgroundColor: '#63A3DC',
+                          color: 'white',
+                          width: '200px',
+                        }}
+                        size='large'>
+                        GET STARTED
+                      </Button>
                     </Row>
-                  </Card>
+                  </div>
                 </Row>
               </div>
               <div>
-                <Row justify={'center'} style={{ marginTop: '30px' }}>
-                  <Card hoverable title='150$' style={{ width: 300 }}>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Blog System</Text>
-                      </Col>
+                <Row justify={'center'}>
+                  {' '}
+                  <div
+                    style={{
+                      marginTop: '100px',
+                      background: 'white',
+                      width: '85%',
+                      height: '600px',
+                      borderRadius: '10px',
+                    }}>
+                    <Row justify={'end'}>
+                      <div
+                        style={{
+                          position: 'absolute',
+                          zIndex: 1,
+                          color: 'white',
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginTop: '30px',
+                          marginRight: '15px',
+                        }}>
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 20,
+                            fontWeight: 600,
+                            marginRight: '179px',
+                          }}>
+                          PLATINUM
+                        </Text>{' '}
+                        <Text
+                          style={{
+                            color: 'white',
+                            fontSize: 24,
+                            fontWeight: 700,
+                            marginRight: '193px',
+
+                            display: 'block',
+                          }}>
+                          PACKAGE
+                        </Text>{' '}
+                      </div>
+
+                      <img
+                        src={vector5}
+                        alt=''
+                        style={{
+                          position: 'absolute',
+                          width: '320px',
+                        }}
+                      />
+
+                      <Text
+                        style={{
+                          position: 'absolute',
+                          fontSize: 60,
+                          fontWeight: 750,
+                          color: '#63A3DC',
+                          zIndex: 1,
+                          marginRight: '13px',
+                          marginTop: '75px',
+                        }}>
+                        $150
+                      </Text>
                     </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Support System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>POS System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Marketing System</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Multiple Payment Options</Text>
-                      </Col>
-                    </Row>
-                    <Row
-                      style={{
-                        paddingBottom: '20px',
-                      }}>
-                      <Col span={3}>
-                        {' '}
-                        <CheckCircleFilled />
-                      </Col>
-                      <Col>
-                        <Text>Reports</Text>
-                      </Col>
+                    {/* Second Part */}
+                    <Row justify={'center'}>
+                      <div
+                        style={{
+                          paddingBottom: '20px',
+                          marginTop: '200px',
+                        }}>
+                        {items.map((item) => (
+                          <>
+                            <Row
+                              style={{
+                                paddingBottom: '20px',
+                                //   marginTop: '200px',
+                              }}>
+                              <Col>
+                                {' '}
+                                <img
+                                  src={item.icon}
+                                  alt=''
+                                  style={{ paddingRight: '10px' }}
+                                />
+                              </Col>
+                              <Col>
+                                <Text
+                                  style={{
+                                    fontSize: 16,
+                                    fontWeight: 650,
+                                    color: 'black',
+                                  }}>
+                                  {item.title}
+                                </Text>
+                              </Col>
+                            </Row>
+                          </>
+                        ))}
+                      </div>
                     </Row>
                     <Row
                       justify={'center'}
                       style={{
                         paddingBottom: '20px',
                       }}>
-                      <Button size='large'>GET STARTED</Button>
+                      <Button
+                        style={{
+                          backgroundColor: 'transparent',
+                          color: '#63A3DC',
+                          borderColor: '#63A3DC',
+                          width: '200px',
+                          fontWeight: '650',
+                        }}
+                        size='large'>
+                        GET STARTED
+                      </Button>
                     </Row>
-                  </Card>
+                  </div>
                 </Row>
               </div>
             </Carousel>
@@ -688,7 +810,7 @@ function OurPricingPlans({ darkMode }) {
       {isTabletOrMobile ? (
         <div
           style={{
-            background: 'white',
+            background: 'transparent',
             backgroundImage: `url(${pricingBgRes})`,
             paddingBottom: '50px',
           }}>
@@ -720,9 +842,9 @@ function OurPricingPlans({ darkMode }) {
                 {' '}
                 <div
                   style={{
-                    marginTop: '300px',
+                    marginTop: '100px',
                     background: 'white',
-                    width: '392px',
+                    width: '85%',
                     height: '600px',
                   }}>
                   <Row justify={'end'}>
@@ -761,6 +883,7 @@ function OurPricingPlans({ darkMode }) {
                       alt=''
                       style={{
                         position: 'absolute',
+                        width: '320px',
                       }}
                     />
 
@@ -771,8 +894,8 @@ function OurPricingPlans({ darkMode }) {
                         fontWeight: 750,
                         color: '#63A3DC',
                         zIndex: 1,
-                        marginRight: '245px',
-                        marginTop: '45px',
+                        marginRight: '175px',
+                        marginTop: '75px',
                       }}>
                       $100
                     </Text>
@@ -804,6 +927,7 @@ function OurPricingPlans({ darkMode }) {
                                 style={{
                                   fontSize: 16,
                                   fontWeight: 650,
+                                  color: 'black',
                                 }}>
                                 {item.title}
                               </Text>
@@ -839,9 +963,9 @@ function OurPricingPlans({ darkMode }) {
                 {' '}
                 <div
                   style={{
-                    marginTop: '200px',
+                    marginTop: '100px',
                     background: 'white',
-                    width: '392px',
+                    width: '85%',
                     height: '600px',
                   }}>
                   <Row justify={'end'}>
@@ -890,8 +1014,8 @@ function OurPricingPlans({ darkMode }) {
                         fontWeight: 750,
                         color: '#63A3DC',
                         zIndex: 1,
-                        marginRight: '245px',
-                        marginTop: '45px',
+                        marginRight: '172px',
+                        marginTop: '75px',
                       }}>
                       $120
                     </Text>
@@ -923,6 +1047,7 @@ function OurPricingPlans({ darkMode }) {
                                 style={{
                                   fontSize: 16,
                                   fontWeight: 650,
+                                  color: 'black',
                                 }}>
                                 {item.title}
                               </Text>
@@ -936,7 +1061,7 @@ function OurPricingPlans({ darkMode }) {
                       alt=''
                       style={{
                         position: 'absolute',
-                        marginRight: '336px',
+                        marginRight: '255px',
                         marginTop: '466px',
                       }}
                     />
@@ -945,7 +1070,7 @@ function OurPricingPlans({ darkMode }) {
                       alt=''
                       style={{
                         position: 'absolute',
-                        marginLeft: '347px',
+                        marginLeft: '267px',
                         marginTop: '434px',
                       }}
                     />
@@ -973,9 +1098,9 @@ function OurPricingPlans({ darkMode }) {
                 {' '}
                 <div
                   style={{
-                    marginTop: '300px',
+                    marginTop: '100px',
                     background: 'white',
-                    width: '392px',
+                    width: '85%',
                     height: '600px',
                     borderRadius: '10px',
                   }}>
@@ -995,7 +1120,7 @@ function OurPricingPlans({ darkMode }) {
                           color: 'white',
                           fontSize: 20,
                           fontWeight: 600,
-                          marginRight: '255px',
+                          marginRight: '179px',
                         }}>
                         PLATINUM
                       </Text>{' '}
@@ -1004,7 +1129,7 @@ function OurPricingPlans({ darkMode }) {
                           color: 'white',
                           fontSize: 24,
                           fontWeight: 700,
-                          marginRight: '250px',
+                          marginRight: '193px',
 
                           display: 'block',
                         }}>
@@ -1017,6 +1142,7 @@ function OurPricingPlans({ darkMode }) {
                       alt=''
                       style={{
                         position: 'absolute',
+                        width: '320px',
                       }}
                     />
 
@@ -1028,7 +1154,7 @@ function OurPricingPlans({ darkMode }) {
                         color: '#63A3DC',
                         zIndex: 1,
                         marginRight: '13px',
-                        marginTop: '90px',
+                        marginTop: '75px',
                       }}>
                       $150
                     </Text>
@@ -1060,6 +1186,7 @@ function OurPricingPlans({ darkMode }) {
                                 style={{
                                   fontSize: 16,
                                   fontWeight: 650,
+                                  color: 'black',
                                 }}>
                                 {item.title}
                               </Text>

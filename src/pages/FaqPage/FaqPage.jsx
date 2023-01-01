@@ -33,6 +33,7 @@ function FaqPage({ darkMode, setThemes }) {
                 style={{
                   margin: 0,
                   marginBottom: '30px',
+                  color: 'white',
                 }}>
                 FAQ
               </Typography.Title>
@@ -46,26 +47,26 @@ function FaqPage({ darkMode, setThemes }) {
                 {' '}
                 <Collapse>
                   <Panel
-                    style={{ backgroundColor: 'white' }}
+                    style={{ backgroundColor: '#313131' }}
                     header='What is INVASSO ?'
                     key='1'>
-                    <p style={{ color: '#5A7184', textAlign: 'left' }}>
+                    <p style={{ color: '#AEAEAE', textAlign: 'left' }}>
                       {text}
                     </p>
                   </Panel>
                   <Panel
-                    style={{ backgroundColor: 'white' }}
+                    style={{ backgroundColor: '#313131' }}
                     header='What is INVASSO ?'
                     key='2'>
-                    <p style={{ color: '#5A7184', textAlign: 'left' }}>
+                    <p style={{ color: '#AEAEAE', textAlign: 'left' }}>
                       {text}
                     </p>
                   </Panel>
                   <Panel
-                    style={{ backgroundColor: 'white' }}
+                    style={{ backgroundColor: '#313131' }}
                     header='What is INVASSO ?'
                     key='3'>
-                    <p style={{ color: '#5A7184', textAlign: 'left' }}>
+                    <p style={{ color: '#AEAEAE', textAlign: 'left' }}>
                       {text}
                     </p>
                   </Panel>

@@ -24,7 +24,7 @@ function ServicesShopping({ setThemes, darkMode }) {
             {/* First Section */}
             <div
               style={{
-                backgroundImage: `url(${servicesSoppingBg})`,
+                backgroundImage: `url(${servicesSoppingBgDark})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 height: '500px',
@@ -80,7 +80,7 @@ function ServicesShopping({ setThemes, darkMode }) {
               <Row justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '400px',
                   }}>
@@ -98,6 +98,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Personalized Services
@@ -107,7 +108,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -125,7 +126,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -134,6 +135,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Personalized Services
@@ -143,7 +145,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -161,7 +163,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -170,6 +172,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Free Website
@@ -179,7 +182,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -197,7 +200,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -206,6 +209,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Professional Team
@@ -215,7 +219,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -233,7 +237,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -242,6 +246,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Expertise
@@ -251,7 +256,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -280,7 +285,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 <Typography.Title
                   level={3}
                   style={{
-                    color: 'black',
+                    color: 'white',
                     textAlign: 'left',
                     fontWeight: 'bold',
                   }}>
@@ -291,7 +296,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                 <Col span={20}>
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       //   fontSize: 24,
                     }}>
@@ -315,7 +320,7 @@ function ServicesShopping({ setThemes, darkMode }) {
             </div>
             {/* Fourth Section */}
             <div>
-              <Row justify={'center'}>
+              <Row justify={'center'} style={{ marginTop: '20px' }}>
                 <Col span={22}>
                   <Text
                     style={{
@@ -329,12 +334,12 @@ function ServicesShopping({ setThemes, darkMode }) {
                   </Text>
                 </Col>
               </Row>
-              <Row justify={'center'}>
+              <Row justify={'center'} style={{ marginTop: '20px' }}>
                 {' '}
                 <Col span={20}>
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       fontSize: 14,
                       fontWeight: 600,
@@ -353,7 +358,7 @@ function ServicesShopping({ setThemes, darkMode }) {
                   {' '}
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       fontSize: 14,
                     }}>

@@ -18,13 +18,13 @@ function AboutUs({ darkMode, setThemes }) {
             {' '}
             <section
               style={{
-                background: 'white',
+                background: 'black',
               }}>
               <Row justify={'center'}>
                 <Typography.Title
                   level={3}
                   style={{
-                    color: 'black',
+                    color: 'white',
                     marginTop: '100px',
                     // marginRight: '80px',
                   }}>
@@ -42,7 +42,7 @@ function AboutUs({ darkMode, setThemes }) {
                 />
               </Row>
               <Row justify={'center'}>
-                <ul style={{ fontSize: 13, textAlign: 'left' }}>
+                <ul style={{ fontSize: 13, textAlign: 'left', color: 'white' }}>
                   <li style={{ marginBottom: 20 }}>
                     Orderitto has a specialized team that not only <br />
                     helps you build your online store, but guides <br />
@@ -61,13 +61,13 @@ function AboutUs({ darkMode, setThemes }) {
             </section>
             <section
               style={{
-                background: 'white',
+                background: 'black',
               }}>
               <Row justify={'center'}>
                 <Typography.Title
                   level={3}
                   style={{
-                    color: 'black',
+                    color: 'white',
                     textAlign: 'left',
 
                     // marginRight: '80px',
@@ -87,7 +87,13 @@ function AboutUs({ darkMode, setThemes }) {
                 />
               </Row>
               <Row justify={'center'}>
-                <Paragraph style={{ fontSize: 13, textAlign: 'left' }}>
+                <Paragraph
+                  style={{
+                    fontSize: 13,
+                    textAlign: 'left',
+                    color: 'white',
+                    marginTop: '30px',
+                  }}>
                   With Orderitto, you can easily create an online store
                   <br /> that has amazing features such as promotions, custom{' '}
                   <br /> domains, and even a full-functioning mobile app to

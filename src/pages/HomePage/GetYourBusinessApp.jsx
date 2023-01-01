@@ -22,7 +22,7 @@ function GetYourBusinessApp({ darkMode }) {
         {isTabletOrMobile ? (
           <div
             style={{
-              backgroundColor: '#f3f3f3',
+              backgroundColor: 'transparent',
 
               paddingBottom: '50px',
             }}>
@@ -30,7 +30,7 @@ function GetYourBusinessApp({ darkMode }) {
               <Typography.Title
                 level={2}
                 style={{
-                  color: 'black',
+                  color: 'white',
                   textAlign: 'left',
                 }}>
                 Get Your Business App
@@ -38,15 +38,15 @@ function GetYourBusinessApp({ darkMode }) {
             </Row>
             <Row justify={'center'}>
               <img
-                src={home7}
-                alt='home7'
+                src={mobileModelDark}
+                alt=''
                 style={{ width: '300px', marginTop: '30px' }}
               />
             </Row>
             <Row justify={'center'}>
               <Paragraph
                 style={{
-                  color: '#5A7184',
+                  color: '#AEAEAE',
                   fontSize: 16,
                   textAlign: 'left',
                   paddingLeft: '30px',
@@ -62,14 +62,14 @@ function GetYourBusinessApp({ darkMode }) {
               <Col span={12}>
                 {' '}
                 <a>
-                  <img src={appleStore} alt='appleStore' />
+                  <img src={appleStoreDark} alt='' />
                 </a>
               </Col>
               <Col span={12}>
                 {' '}
                 <a>
                   {' '}
-                  <img src={googlePlay} alt='googlePlay' />
+                  <img src={googlePlayDark} alt='' />
                 </a>
               </Col>
             </Row>

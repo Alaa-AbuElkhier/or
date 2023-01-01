@@ -108,7 +108,7 @@ function PricingPage({ setThemes, darkMode }) {
         />
       </Row> */}
       <Row justify={'center'}>
-        <Col span={6}>
+        <Col span={8}>
           {/* First Card 100$ */}
           <Row justify={'center'}>
             {' '}
@@ -228,7 +228,7 @@ function PricingPage({ setThemes, darkMode }) {
             </div>
           </Row>
         </Col>
-        <Col span={6}>
+        <Col span={8}>
           {' '}
           {/* Second Card  120$*/}
           <Row justify={'center'}>
@@ -365,7 +365,7 @@ function PricingPage({ setThemes, darkMode }) {
           </Row>
         </Col>
 
-        <Col span={6}>
+        <Col span={8}>
           {' '}
           {/* Third Card  150$*/}
           <Row justify={'center'}>

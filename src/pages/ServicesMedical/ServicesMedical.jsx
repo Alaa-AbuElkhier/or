@@ -25,7 +25,7 @@ function ServicesMedical({ setThemes, darkMode }) {
             {/* First Section */}
             <div
               style={{
-                backgroundImage: `url(${servicesMedicalBg})`,
+                backgroundImage: `url(${servicesMedicalBgDark})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 height: '500px',
@@ -78,23 +78,10 @@ function ServicesMedical({ setThemes, darkMode }) {
               style={{
                 marginBottom: '100px',
               }}>
-              <Row
-                justify={'center'}
-                style={{
-                  marginBottom: '30px',
-                }}>
-                <Typography.Title
-                  style={{
-                    color: '#01ACEB',
-                  }}
-                  level={4}>
-                  Free Professional Services
-                </Typography.Title>
-              </Row>
               <Row justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '400px',
                   }}>
@@ -112,6 +99,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Personalized Services
@@ -121,7 +109,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -139,7 +127,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -148,6 +136,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Personalized Services
@@ -157,7 +146,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -175,7 +164,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -184,6 +173,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Free Website
@@ -193,7 +183,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -211,7 +201,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -220,6 +210,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Professional Team
@@ -229,7 +220,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -247,7 +238,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 justify={'center'}>
                 <Card
                   style={{
-                    background: '#e3e3e3',
+                    background: '#313131',
                     width: '300px',
                     height: '229px',
                   }}>
@@ -256,6 +247,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                       style={{
                         textAlign: 'left',
                         fontWeight: 'bold',
+                        color: 'white',
                       }}
                       level={4}>
                       Expertise
@@ -265,7 +257,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     {' '}
                     <Paragraph
                       style={{
-                        color: 'black',
+                        color: '#AEAEAE',
                         fontSize: 16,
                         textAlign: 'left',
                       }}>
@@ -286,7 +278,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                     style={{
                       width: '300px',
                     }}
-                    alt='home4Res'
+                    alt=''
                   />
                 </Col>
               </Row>
@@ -294,7 +286,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 <Typography.Title
                   level={3}
                   style={{
-                    color: 'black',
+                    color: 'white',
                     textAlign: 'left',
                     fontWeight: 'bold',
                   }}>
@@ -305,7 +297,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                 <Col span={20}>
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       //   fontSize: 24,
                     }}>
@@ -329,7 +321,7 @@ function ServicesMedical({ setThemes, darkMode }) {
             </div>
             {/* Fourth Section */}
             <div>
-              <Row justify={'center'}>
+              <Row justify={'center'} style={{ marginTop: '20px' }}>
                 <Col span={22}>
                   <Text
                     style={{
@@ -343,12 +335,12 @@ function ServicesMedical({ setThemes, darkMode }) {
                   </Text>
                 </Col>
               </Row>
-              <Row justify={'center'}>
+              <Row justify={'center'} style={{ marginTop: '20px' }}>
                 {' '}
                 <Col span={20}>
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       fontSize: 14,
                       fontWeight: 600,
@@ -367,7 +359,7 @@ function ServicesMedical({ setThemes, darkMode }) {
                   {' '}
                   <Paragraph
                     style={{
-                      color: 'black',
+                      color: 'white',
                       textAlign: 'left',
                       fontSize: 14,
                     }}>

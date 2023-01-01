@@ -30,7 +30,7 @@ function ContactUs({ darkMode, setThemes }) {
         {isTabletOrMobile ? (
           <section
             style={{
-              background: 'white',
+              background: 'black',
             }}>
             <Row justify={'center'}>
               <img
@@ -47,7 +47,7 @@ function ContactUs({ darkMode, setThemes }) {
               <Typography.Title
                 level={2}
                 style={{
-                  color: 'black',
+                  color: 'white',
                   marginTop: '30px',
                 }}>
                 Let's get in touch
